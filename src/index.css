@@ -42,12 +42,22 @@ section[id] {
   transform: translateY(0);
 }
 
-/* Language bar animation */
-.lang-bar-fill {
-  width: 0;
-  transition: width 1s ease-out 0.3s;
+/* Staggered reveal delays for metric items */
+.reveal-delay-1 { transition-delay: 0s; }
+.reveal-delay-2 { transition-delay: 0.15s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.45s; }
+
+/* Gauge ring animation */
+@keyframes gauge-fill {
+  from {
+    stroke-dashoffset: var(--gauge-circumference);
+  }
+  to {
+    stroke-dashoffset: var(--gauge-offset);
+  }
 }
 
-.lang-bar-fill.visible {
-  width: var(--bar-width);
+.gauge-ring circle:nth-child(2) {
+  animation: gauge-fill 1.5s ease-out forwards;
 }

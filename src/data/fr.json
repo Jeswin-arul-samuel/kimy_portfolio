@@ -21,6 +21,14 @@
     "subheadline": "Gouvernance IA | Conformite RGPD | Agile (Scrum/Kanban)",
     "cta": "Decouvrir mon parcours"
   },
+  "metrics": {
+    "items": [
+      { "value": 2, "suffix": "", "label": "Annees d'Experience" },
+      { "value": 30, "suffix": "+", "label": "Parties Prenantes" },
+      { "value": 90, "suffix": "%", "label": "Satisfaction Equipe" },
+      { "value": 4, "suffix": "", "label": "Pays" }
+    ]
+  },
   "about": {
     "title": "A Propos",
     "text": "Chef de projet orientee resultats avec une experience concrete dans le pilotage d'initiatives Data & IA, aussi bien dans le secteur public que prive. Specialisee en strategie de transformation numerique, cadrage de projets d'IA Generative et conformite reglementaire. Capacite prouvee a coordonner des equipes pluridisciplinaires, aligner les parties prenantes au sein d'ecosystemes complexes et delivrer des resultats mesurables via des frameworks Agile et de gouvernance. Bilingue francais-anglais avec une experience internationale en France, Polynesie francaise, Tahiti et Nouvelle-Zelande.",
@@ -37,6 +45,7 @@
         "company": "Gouvernement de la Polynesie Francaise",
         "period": "Mars 2024 - Novembre 2024",
         "duration": "8 mois",
+        "metrics": ["30+ parties prenantes", "3 axes politiques", "10 points de risque"],
         "bullets": [
           "Cartographie de 30+ acteurs cles (DGEN, OPT, FAI) via un Stakeholder Mapping, alignant les feuilles de route publiques/privees pour la structuration des filieres Audiovisuel & Numerique",
           "Referent entre la direction du gouvernement et la DGEN, assurant la traduction de 3 axes majeurs de politique publique en une feuille de route operationnelle co-construite et executable par les services techniques",
@@ -51,6 +60,7 @@
         "company": "Credit Agricole S.A (Paris)",
         "period": "Juin 2023 - Novembre 2023",
         "duration": "5 mois",
+        "metrics": ["Equipe de 10", "90% satisfaction", "15% plus rapide"],
         "bullets": [
           "Structuration de la collaboration d'une equipe transverse de 10 personnes (Data Scientists, Developpeurs, Data Engineers) via une Matrice RACI, reduisant les temps de latence decisionnelle de 15% durant la phase de cadrage des POCs",
           "Cadrage et arbitrage fonctionnel de 2 POCs (Preuves de Concept) en IA Generative via la methode MoSCoW, isolant les fonctionnalites critiques (\u00ab Must Have \u00bb) pour garantir un livrable testable en moins de 4 mois",
@@ -62,6 +72,7 @@
         "company": "Les Belles Envies (Paris)",
         "period": "Septembre 2021 - Decembre 2021",
         "duration": "3 mois",
+        "metrics": [],
         "bullets": [
           "Conception de visuels produits et etiquettes pour les gammes retail et laboratoire",
           "Pilotage de la prospection commerciale, conseil client et gestion des encaissements en point de vente",
@@ -74,6 +85,7 @@
         "company": "American Express OFINA (Tahiti)",
         "period": "Fevrier 2021 - Aout 2021",
         "duration": "6 mois",
+        "metrics": [],
         "bullets": [
           "Developpement strategique de plans de communication pour les produits bancaires regionaux",
           "Creation de supports visuels produits et educatifs ; suivi des mises a jour du welcome kit",
@@ -85,6 +97,7 @@
         "company": "Air Caledonie (Nouvelle-Caledonie)",
         "period": "Janvier 2018 - Mars 2018",
         "duration": "2 mois",
+        "metrics": [],
         "bullets": [
           "Conception de visuels produits et supports de communication de marque",
           "Gestion du sponsoring et de la logistique de l'evenement annuel de teambuilding"
@@ -144,30 +157,35 @@
         "name": "Strategie Numerique & Alignement de l'Ecosysteme",
         "company": "Gouvernement de la Polynesie Francaise",
         "year": "2024",
+        "metric": { "value": "30+", "label": "Parties Prenantes" },
         "description": "Participation a la construction d'une cartographie complete de 30+ acteurs publics et prives pour aligner les feuilles de route des filieres numerique et audiovisuel de la Polynesie francaise. Contribution au rapprochement des objectifs de politique publique avec les plans d'execution operationnels."
       },
       {
         "name": "Livraison de POCs en IA Generative (x2)",
         "company": "Credit Agricole S.A",
         "year": "2023",
+        "metric": { "value": "2", "label": "POCs Livres" },
         "description": "Cadrage et livraison de 2 Preuves de Concept en IA Generative au sein d'un grand etablissement bancaire francais. Application de la priorisation MoSCoW pour isoler les fonctionnalites critiques et garantir des livrables testables dans un delai de 4 mois."
       },
       {
         "name": "Evaluation des Risques Reglementaires",
         "company": "Gouvernement de la Polynesie Francaise",
         "year": "2024",
+        "metric": { "value": "10", "label": "Points de Risque" },
         "description": "Analyse d'impact reglementaire sur 2 projets d'infrastructures publiques via une methodologie formelle de Matrice des Risques, identifiant 10 points de risque juridiques et techniques en amont des appels d'offres."
       },
       {
         "name": "Reduction de la Fracture Numerique",
         "company": "Gouvernement de la Polynesie Francaise",
         "year": "2024",
+        "metric": { "value": "2", "label": "Zones Blanches" },
         "description": "Conception et application d'une Matrice de Decision multicriteres pour prioriser les zones d'intervention, permettant des actions ciblees sur 2 zones blanches pour l'acces au haut debit sur un plan de 12 mois."
       },
       {
         "name": "Programme Veille IA Green",
         "company": "Credit Agricole S.A",
         "year": "2023",
+        "metric": { "value": "90%", "label": "Satisfaction" },
         "description": "Conception et animation d'ateliers internes sur les pratiques d'IA responsable et durable. Mise en place d'un systeme de feedback quantitatif ayant enregistre un taux de satisfaction de 90% aupres des participants techniques et metier."
       }
     ]

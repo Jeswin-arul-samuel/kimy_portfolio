@@ -1,17 +1,17 @@
 import { useLanguage } from '../hooks/useLanguage'
 import SectionHeading from './ui/SectionHeading'
-import LanguageBar from './ui/LanguageBar'
+import CircularGauge from './ui/CircularGauge'
 
 export default function Languages() {
   const { t } = useLanguage()
 
   return (
     <section id="languages" className="py-20 px-4 bg-warm-white">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <SectionHeading>{t.languages.title}</SectionHeading>
-        <div className="reveal">
+        <div className="reveal grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
           {t.languages.items.map((lang) => (
-            <LanguageBar key={lang.name} {...lang} />
+            <CircularGauge key={lang.name} {...lang} />
           ))}
         </div>
       </div>

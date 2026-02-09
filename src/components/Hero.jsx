@@ -1,7 +1,22 @@
 import { useLanguage } from '../hooks/useLanguage'
+import useCountUp from '../hooks/useCountUp'
+
+function CounterItem({ value, suffix, label }) {
+  const { count, ref } = useCountUp(value)
+
+  return (
+    <div ref={ref} className="text-center">
+      <span className="font-display text-3xl md:text-4xl font-bold text-gold">
+        {count}{suffix}
+      </span>
+      <p className="font-ui text-xs md:text-sm text-taupe mt-1">{label}</p>
+    </div>
+  )
+}
 
 export default function Hero() {
   const { t } = useLanguage()
+  const metrics = t.metrics?.items
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 pt-16 bg-cream">
@@ -29,6 +44,14 @@ export default function Hero() {
         >
           {t.hero.cta}
         </a>
+
+        {metrics && (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-14 pt-10 border-t border-cream-dark">
+            {metrics.map((item) => (
+              <CounterItem key={item.label} value={item.value} suffix={item.suffix} label={item.label} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   )

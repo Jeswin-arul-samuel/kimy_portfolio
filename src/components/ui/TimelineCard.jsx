@@ -1,4 +1,4 @@
-export default function TimelineCard({ position, company, period, duration, bullets }) {
+export default function TimelineCard({ position, company, period, duration, metrics, bullets }) {
   return (
     <div className="relative pl-8 pb-12 border-l-2 border-cream-dark last:pb-0 last:border-l-0 group">
       {/* Timeline dot */}
@@ -9,6 +9,20 @@ export default function TimelineCard({ position, company, period, duration, bull
         <p className="font-ui text-sm text-taupe mt-1">
           {company} <span className="mx-2">|</span> {period} <span className="mx-2">|</span> {duration}
         </p>
+
+        {metrics && metrics.length > 0 && (
+          <div className="flex flex-wrap gap-2 mt-3">
+            {metrics.map((m, i) => (
+              <span
+                key={i}
+                className="font-ui text-xs font-medium text-gold border border-gold rounded-full px-3 py-1"
+              >
+                {m}
+              </span>
+            ))}
+          </div>
+        )}
+
         <ul className="mt-4 space-y-2">
           {bullets.map((bullet, i) => (
             <li key={i} className="text-sm leading-relaxed text-navy-light pl-4 relative before:content-[''] before:absolute before:left-0 before:top-2.5 before:w-1.5 before:h-1.5 before:rounded-full before:bg-gold">
