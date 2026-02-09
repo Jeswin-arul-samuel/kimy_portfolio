@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", serif;
+  --font-body: "Lora", serif;
+  --font-ui: "Inter", sans-serif;
+
+  --color-navy: #2C3E50;
+  --color-navy-light: #3D5166;
+  --color-taupe: #8B7D6B;
+  --color-gold: #B8976A;
+  --color-gold-light: #D4B896;
+  --color-warm-white: #FAF8F5;
+  --color-cream: #F0EDE8;
+  --color-cream-dark: #E5E0D8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-navy);
+  background-color: var(--color-warm-white);
+}
+
+/* Scroll margin for anchor links */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Language bar animation */
+.lang-bar-fill {
+  width: 0;
+  transition: width 1s ease-out 0.3s;
+}
+
+.lang-bar-fill.visible {
+  width: var(--bar-width);
+}
