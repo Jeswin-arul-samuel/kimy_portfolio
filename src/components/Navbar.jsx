@@ -1,36 +1,46 @@
 import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { useLanguage } from '../hooks/useLanguage'
-import { useActiveSection } from '../hooks/useActiveSection'
 
-const NAV_KEYS = ['about', 'experience', 'education', 'skills', 'projects', 'certifications', 'languages', 'hobbies', 'contact']
+const NAV_ITEMS = [
+  { key: 'about', path: '/' },
+  { key: 'experience', path: '/experience' },
+  { key: 'education', path: '/education' },
+  { key: 'skills', path: '/skills' },
+  { key: 'projects', path: '/projects' },
+  { key: 'certifications', path: '/certifications' },
+  { key: 'languages', path: '/languages' },
+  { key: 'hobbies', path: '/hobbies' },
+  { key: 'contact', path: '/contact' },
+  { key: 'resume', path: '/resume' },
+]
 
 export default function Navbar() {
   const { lang, t, toggleLang } = useLanguage()
-  const active = useActiveSection()
+  const { pathname } = useLocation()
   const [open, setOpen] = useState(false)
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-warm-white/90 backdrop-blur-sm border-b border-cream-dark">
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
-        {/* Logo / Name */}
-        <a href="#" className="font-display text-xl font-semibold text-navy no-underline">
+        <Link to="/" className="font-display text-xl font-semibold text-navy no-underline">
           K.H.
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6">
-          {NAV_KEYS.map((key) => (
-            <a
+          {NAV_ITEMS.map(({ key, path }) => (
+            <Link
               key={key}
-              href={`#${key}`}
+              to={path}
               className={`font-ui text-sm no-underline transition-colors ${
-                active === key
+                pathname === path
                   ? 'text-gold font-medium'
                   : 'text-navy-light hover:text-gold'
               }`}
             >
               {t.nav[key]}
-            </a>
+            </Link>
           ))}
           <button
             onClick={toggleLang}
@@ -74,17 +84,17 @@ export default function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-warm-white border-t border-cream-dark px-4 py-4 space-y-3">
-          {NAV_KEYS.map((key) => (
-            <a
+          {NAV_ITEMS.map(({ key, path }) => (
+            <Link
               key={key}
-              href={`#${key}`}
+              to={path}
               onClick={() => setOpen(false)}
               className={`block font-ui text-sm no-underline ${
-                active === key ? 'text-gold font-medium' : 'text-navy-light'
+                pathname === path ? 'text-gold font-medium' : 'text-navy-light'
               }`}
             >
               {t.nav[key]}
-            </a>
+            </Link>
           ))}
         </div>
       )}

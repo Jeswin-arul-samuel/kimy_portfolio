@@ -12,7 +12,8 @@
     "certifications": "Certifications",
     "languages": "Languages",
     "hobbies": "Hobbies",
-    "contact": "Contact"
+    "contact": "Contact",
+    "resume": "Resume"
   },
   "hero": {
     "greeting": "Hello, I'm",
@@ -31,11 +32,11 @@
   },
   "about": {
     "title": "About Me",
-    "text": "Results-driven project manager with hands-on experience leading Data & AI initiatives in both the public and private sectors. Specialized in digital transformation strategy, Generative AI project scoping, and regulatory compliance. Proven ability to coordinate multidisciplinary teams, align stakeholders across complex ecosystems, and deliver measurable outcomes using Agile and governance frameworks. Bilingual French-English with international experience across France, French Polynesia, Tahiti, and New Zealand.",
-    "location": "Toulouse, France",
+    "text": "Striving for human-centered Data & AI. Born and raised in a multicultural environment, I draw on this open-mindedness to bridge the dialogue between the public and private sectors, convinced that collective intelligence is essential to success. Bilingual French-English with international experience across Europe and Oceania, my journey has forged a proven ability to coordinate multidisciplinary teams within complex ecosystems. My approach seeks the right balance: delivering measurable outcomes through Agile and governance frameworks (GDPR), while making complexity accessible to turn every project into a driver of shared progress and digital acculturation.",
     "email": "kimhilaire@yahoo.fr",
     "phone": "(+33) 6 26 21 13 55",
-    "linkedin": "kim hilaire"
+    "linkedin": "kim hilaire",
+    "linkedinUrl": "https://www.linkedin.com/in/kim-h-618bb9202/"
   },
   "experience": {
     "title": "Professional Experience",
@@ -57,7 +58,7 @@
       },
       {
         "position": "Assistant Project Manager - Data & AI",
-        "company": "Credit Agricole S.A (Paris)",
+        "company": "Credit Agricole S.A, DataLab (Paris)",
         "period": "June 2023 - November 2023",
         "duration": "5 months",
         "metrics": ["10-person team", "90% satisfaction", "15% faster decisions"],
@@ -111,7 +112,8 @@
       {
         "degree": "Master in Management PGE / MSc Artificial Intelligence for Business Transformation (AIBT)",
         "institution": "Skema Business School / ESIEA France",
-        "period": "2020 - 2023"
+        "period": "2020 - 2023",
+        "note": "2021 professional gap year"
       },
       {
         "degree": "Bachelor of Commerce - Double Majors: International Business & Management",
@@ -120,12 +122,12 @@
       },
       {
         "degree": "Preparatory Classes - Hypokhagne (Literature)",
-        "institution": "Lycee La Perouse, Noumea",
+        "institution": "Lycee Laperouse, Noumea, New Caledonia",
         "period": "February - May 2016"
       },
       {
         "degree": "Scientific Baccalaureate",
-        "institution": "Lycee Blaise Pascal, Noumea",
+        "institution": "Lycee Blaise Pascal, Noumea, New Caledonia",
         "period": "2013 - 2015"
       }
     ]
@@ -135,10 +137,10 @@
     "technicalTitle": "Technical Skills",
     "softTitle": "Soft Skills",
     "technical": {
-      "Project Management & Methodologies": ["Agile (Scrum, Kanban)", "V-Cycle (Waterfall)", "Project Scoping", "Project Steering", "Stakeholder Management", "Change Management", "Risk Management"],
+      "Project Management & Methodologies": ["Agile (Scrum, Kanban)", "V-Cycle (Waterfall)", "Project Scoping", "Project Steering", "Stakeholder Management", "Change Management", "Cross-Functional Team Coordination", "Risk Management"],
       "Governance & Frameworks": ["RACI Matrix", "MoSCoW Prioritization", "Risk Matrix", "Decision Matrix", "Stakeholder Mapping", "Regulatory Impact Analysis"],
-      "Data, AI & Compliance": ["GDPR / RGPD", "Privacy by Design", "Bias Auditing", "AI Ethics", "Generative AI", "Data Governance", "Responsible AI"],
-      "Tools & Technology": ["Jira", "Confluence", "Trello", "Monday", "Microsoft Office Suite", "Python (Basics)", "SQL (Basics)"]
+      "Data, AI & Compliance": ["GDPR / RGPD", "Privacy by Design", "Bias Auditing", "AI Ethics", "Generative AI", "Data Governance", "Digital Compliance", "Responsible AI"],
+      "Tools & Technology": ["Jira", "Confluence", "Trello", "Monday", "Microsoft Office Suite", "Python", "SQL"]
     },
     "soft": [
       "Technical-to-Business Communication",
@@ -162,7 +164,7 @@
       },
       {
         "name": "Generative AI POC Delivery (x2)",
-        "company": "Credit Agricole S.A",
+        "company": "Credit Agricole S.A, DataLab",
         "year": "2023",
         "metric": { "value": "2", "label": "POCs Delivered" },
         "description": "Scoped and delivered 2 Generative AI Proofs of Concept within a major French banking institution. Applied MoSCoW prioritization to isolate critical features and ensure testable deliverables within a 4-month timeline."
@@ -183,7 +185,7 @@
       },
       {
         "name": "Green AI Watch Program",
-        "company": "Credit Agricole S.A",
+        "company": "Credit Agricole S.A, DataLab",
         "year": "2023",
         "metric": { "value": "90%", "label": "Satisfaction" },
         "description": "Designed and facilitated internal workshops on responsible and sustainable AI practices. Implemented a quantitative feedback system that recorded a 90% satisfaction rate from technical and business participants."
@@ -214,7 +216,7 @@
       {
         "name": "Cambridge Advanced English (CAE) C1",
         "issuer": "Cambridge",
-        "year": "",
+        "year": "2025",
         "description": "Professional-level English proficiency certification"
       }
     ]

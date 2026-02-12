@@ -1,50 +1,31 @@
-import { useEffect } from 'react'
-import { useLanguage } from './hooks/useLanguage'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Experience from './components/Experience'
-import Education from './components/Education'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Certifications from './components/Certifications'
-import Languages from './components/Languages'
-import Hobbies from './components/Hobbies'
-import Footer from './components/Footer'
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import HomePage from './pages/HomePage'
+import ExperiencePage from './pages/ExperiencePage'
+import EducationPage from './pages/EducationPage'
+import SkillsPage from './pages/SkillsPage'
+import ProjectsPage from './pages/ProjectsPage'
+import CertificationsPage from './pages/CertificationsPage'
+import LanguagesPage from './pages/LanguagesPage'
+import HobbiesPage from './pages/HobbiesPage'
+import ContactPage from './pages/ContactPage'
+import ResumePage from './pages/ResumePage'
 
 export default function App() {
-  const { t } = useLanguage()
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
-
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el))
-
-    return () => observer.disconnect()
-  }, [t])
-
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Education />
-      <Skills />
-      <Projects />
-      <Certifications />
-      <Languages />
-      <Hobbies />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/resume" element={<ResumePage />} />
+      <Route element={<Layout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/experience" element={<ExperiencePage />} />
+        <Route path="/education" element={<EducationPage />} />
+        <Route path="/skills" element={<SkillsPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/certifications" element={<CertificationsPage />} />
+        <Route path="/languages" element={<LanguagesPage />} />
+        <Route path="/hobbies" element={<HobbiesPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Route>
+    </Routes>
   )
 }

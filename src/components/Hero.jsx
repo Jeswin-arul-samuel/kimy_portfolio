@@ -19,7 +19,7 @@ export default function Hero() {
   const metrics = t.metrics?.items
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-16 bg-cream">
+    <section className="min-h-screen flex items-center justify-center px-4 bg-cream">
       <div className="text-center max-w-3xl">
         <img
           src="/dp.jpeg"
@@ -38,12 +38,15 @@ export default function Hero() {
         <p className="font-ui text-sm text-taupe tracking-wide mb-10">
           {t.hero.subheadline}
         </p>
-        <a
-          href="#about"
-          className="inline-block font-ui text-sm font-medium px-8 py-3 rounded-full border-2 border-gold text-gold hover:bg-gold hover:text-warm-white transition-colors no-underline"
+        <button
+          onClick={() => {
+            const about = document.getElementById('about')
+            if (about) about.scrollIntoView({ behavior: 'smooth' })
+          }}
+          className="inline-block font-ui text-sm font-medium px-8 py-3 rounded-full border-2 border-gold text-gold hover:bg-gold hover:text-warm-white transition-colors cursor-pointer bg-transparent"
         >
           {t.hero.cta}
-        </a>
+        </button>
 
         {metrics && (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-14 pt-10 border-t border-cream-dark">

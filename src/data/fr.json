@@ -5,102 +5,103 @@
   },
   "nav": {
     "about": "Profil",
-    "experience": "Experiences",
+    "experience": "Expériences",
     "education": "Formations",
-    "skills": "Competences",
+    "skills": "Compétences",
     "projects": "Projets",
     "certifications": "Certifications",
     "languages": "Langues",
     "hobbies": "Loisirs",
-    "contact": "Contact"
+    "contact": "Contact",
+    "resume": "Résumé"
   },
   "hero": {
     "greeting": "Bonjour, je suis",
     "name": "Kim Hilaire",
     "headline": "Chef de Projet Transformation Digitale & Data",
-    "subheadline": "Gouvernance IA | Conformite RGPD | Agile (Scrum/Kanban)",
-    "cta": "Decouvrir mon parcours"
+    "subheadline": "Gouvernance IA | Conformité RGPD | Agile (Scrum/Kanban)",
+    "cta": "Découvrir mon parcours"
   },
   "metrics": {
     "items": [
-      { "value": 2, "suffix": "", "label": "Annees d'Experience" },
+      { "value": 2, "suffix": "", "label": "Années d'Expérience" },
       { "value": 30, "suffix": "+", "label": "Parties Prenantes" },
-      { "value": 90, "suffix": "%", "label": "Satisfaction Equipe" },
+      { "value": 90, "suffix": "%", "label": "Satisfaction Équipe" },
       { "value": 4, "suffix": "", "label": "Pays" }
     ]
   },
   "about": {
-    "title": "A Propos",
-    "text": "Chef de projet orientee resultats avec une experience concrete dans le pilotage d'initiatives Data & IA, aussi bien dans le secteur public que prive. Specialisee en strategie de transformation numerique, cadrage de projets d'IA Generative et conformite reglementaire. Capacite prouvee a coordonner des equipes pluridisciplinaires, aligner les parties prenantes au sein d'ecosystemes complexes et delivrer des resultats mesurables via des frameworks Agile et de gouvernance. Bilingue francais-anglais avec une experience internationale en France, Polynesie francaise, Tahiti et Nouvelle-Zelande.",
-    "location": "Toulouse, France",
+    "title": "À Propos",
+    "text": "Œuvrer pour une Data & IA centrée sur l'humain. Née et grandie dans un environnement multiculturel, je m'appuie sur cette ouverture d'esprit pour faciliter le dialogue entre le secteur public et privé, convaincue que l'intelligence collective est essentielle à la réussite. Bilingue français-anglais avec une expérience internationale en Europe et en Océanie, mon parcours m'a forgée une capacité prouvée à coordonner des équipes pluridisciplinaires au sein d'écosystèmes complexes. Mon intervention vise un juste équilibre : délivrer des résultats mesurables via des frameworks agiles et de gouvernance (RGPD), tout en vulgarisant la complexité pour faire de chaque projet un levier d'acculturation et de progrès partagé.",
     "email": "kimhilaire@yahoo.fr",
     "phone": "(+33) 6 26 21 13 55",
-    "linkedin": "kim hilaire"
+    "linkedin": "kim hilaire",
+    "linkedinUrl": "https://www.linkedin.com/in/kim-h-618bb9202/"
   },
   "experience": {
-    "title": "Experiences Professionnelles",
+    "title": "Expériences Professionnelles",
     "roles": [
       {
-        "position": "Chargee de Mission - Numerique & Audiovisuel",
-        "company": "Gouvernement de la Polynesie Francaise",
+        "position": "Chargée de Mission - Numérique & Audiovisuel",
+        "company": "Gouvernement de la Polynésie Française",
         "period": "Mars 2024 - Novembre 2024",
         "duration": "8 mois",
         "metrics": ["30+ parties prenantes", "3 axes politiques", "10 points de risque"],
         "bullets": [
-          "Cartographie de 30+ acteurs cles (DGEN, OPT, FAI) via un Stakeholder Mapping, alignant les feuilles de route publiques/privees pour la structuration des filieres Audiovisuel & Numerique",
-          "Referent entre la direction du gouvernement et la DGEN, assurant la traduction de 3 axes majeurs de politique publique en une feuille de route operationnelle co-construite et executable par les services techniques",
-          "Analyse d'impact reglementaire sur 2 projets d'infrastructures publiques via une Matrice des Risques, identifiant 10 points de vigilance juridiques et techniques avant le lancement des appels d'offres",
-          "Priorisation des zones d'intervention de la DGEN pour la reduction de la fracture numerique via une Matrice de Decision multicriteres, ciblant 2 zones blanches prioritaires pour les 12 mois suivants",
-          "Redaction de notes strategiques et proposition de recommandations pour l'adoption de projets technologiques numeriques et audiovisuels",
-          "Etude et instruction de dossiers institutionnels relatifs aux portefeuilles du numerique et de l'audiovisuel"
+          "Cartographie de 30+ acteurs clés (DGEN, OPT, FAI) via un Stakeholder Mapping, alignant les feuilles de route publiques/privées pour la structuration des filières Audiovisuel & Numérique",
+          "Référent entre la direction du gouvernement et la DGEN, assurant la traduction de 3 axes majeurs de politique publique en une feuille de route opérationnelle co-construite et exécutable par les services techniques",
+          "Analyse d'impact réglementaire sur 2 projets d'infrastructures publiques via une Matrice des Risques, identifiant 10 points de vigilance juridiques et techniques avant le lancement des appels d'offres",
+          "Priorisation des zones d'intervention de la DGEN pour la réduction de la fracture numérique via une Matrice de Décision multicritères, ciblant 2 zones blanches prioritaires pour les 12 mois suivants",
+          "Rédaction de notes stratégiques et proposition de recommandations pour l'adoption de projets technologiques numériques et audiovisuels",
+          "Étude et instruction de dossiers institutionnels relatifs aux portefeuilles du numérique et de l'audiovisuel"
         ]
       },
       {
         "position": "Assistante Chef de Projet - Data & IA",
-        "company": "Credit Agricole S.A (Paris)",
+        "company": "Crédit Agricole S.A, DataLab (Paris)",
         "period": "Juin 2023 - Novembre 2023",
         "duration": "5 mois",
-        "metrics": ["Equipe de 10", "90% satisfaction", "15% plus rapide"],
+        "metrics": ["Équipe de 10", "90% satisfaction", "15% plus rapide"],
         "bullets": [
-          "Structuration de la collaboration d'une equipe transverse de 10 personnes (Data Scientists, Developpeurs, Data Engineers) via une Matrice RACI, reduisant les temps de latence decisionnelle de 15% durant la phase de cadrage des POCs",
-          "Cadrage et arbitrage fonctionnel de 2 POCs (Preuves de Concept) en IA Generative via la methode MoSCoW, isolant les fonctionnalites critiques (\u00ab Must Have \u00bb) pour garantir un livrable testable en moins de 4 mois",
-          "Pilotage des ateliers \"Veille IA Green\" et mesure de l'adhesion via une Grille de feedback quantitative, obtenant un taux de satisfaction de 90% aupres des equipes techniques et metier"
+          "Structuration de la collaboration d'une équipe transverse de 10 personnes (Data Scientists, Développeurs, Data Engineers) via une Matrice RACI, réduisant les temps de latence décisionnelle de 15% durant la phase de cadrage des POCs",
+          "Cadrage et arbitrage fonctionnel de 2 POCs (Preuves de Concept) en IA Générative via la méthode MoSCoW, isolant les fonctionnalités critiques (\u00ab Must Have \u00bb) pour garantir un livrable testable en moins de 4 mois",
+          "Pilotage des ateliers \"Veille IA Green\" et mesure de l'adhésion via une Grille de feedback quantitative, obtenant un taux de satisfaction de 90% auprès des équipes techniques et métier"
         ]
       },
       {
-        "position": "Assistante Marketing - Developpement Commercial",
+        "position": "Assistante Marketing - Développement Commercial",
         "company": "Les Belles Envies (Paris)",
-        "period": "Septembre 2021 - Decembre 2021",
+        "period": "Septembre 2021 - Décembre 2021",
         "duration": "3 mois",
         "metrics": [],
         "bullets": [
-          "Conception de visuels produits et etiquettes pour les gammes retail et laboratoire",
+          "Conception de visuels produits et étiquettes pour les gammes retail et laboratoire",
           "Pilotage de la prospection commerciale, conseil client et gestion des encaissements en point de vente",
-          "Creation de DIP (Document d'Information Prealable) pour les operations laboratoire et boutique",
-          "Traduction de brochures commerciales du francais vers l'anglais pour le developpement international"
+          "Création de DIP (Document d'Information Préalable) pour les opérations laboratoire et boutique",
+          "Traduction de brochures commerciales du français vers l'anglais pour le développement international"
         ]
       },
       {
         "position": "Assistante Marketing",
         "company": "American Express OFINA (Tahiti)",
-        "period": "Fevrier 2021 - Aout 2021",
+        "period": "Février 2021 - Août 2021",
         "duration": "6 mois",
         "metrics": [],
         "bullets": [
-          "Developpement strategique de plans de communication pour les produits bancaires regionaux",
-          "Creation de supports visuels produits et educatifs ; suivi des mises a jour du welcome kit",
-          "Analyses de marche sur les neobanques et les banques en ligne concurrentes"
+          "Développement stratégique de plans de communication pour les produits bancaires régionaux",
+          "Création de supports visuels produits et éducatifs ; suivi des mises à jour du welcome kit",
+          "Analyses de marché sur les néobanques et les banques en ligne concurrentes"
         ]
       },
       {
         "position": "Assistante Marketing & Communication",
-        "company": "Air Caledonie (Nouvelle-Caledonie)",
+        "company": "Air Calédonie (Nouvelle-Calédonie)",
         "period": "Janvier 2018 - Mars 2018",
         "duration": "2 mois",
         "metrics": [],
         "bullets": [
           "Conception de visuels produits et supports de communication de marque",
-          "Gestion du sponsoring et de la logistique de l'evenement annuel de teambuilding"
+          "Gestion du sponsoring et de la logistique de l'événement annuel de teambuilding"
         ]
       }
     ]
@@ -111,82 +112,83 @@
       {
         "degree": "Master en Management PGE / MSc Artificial Intelligence for Business Transformation (AIBT)",
         "institution": "Skema Business School / ESIEA France",
-        "period": "2020 - 2023"
+        "period": "2020 - 2023",
+        "note": "2021 année de césure professionnelle"
       },
       {
         "degree": "Bachelor de Commerce - Double Majeurs : Commerce International & Management",
-        "institution": "Universite d'Auckland, Nouvelle-Zelande",
+        "institution": "Université d'Auckland, Nouvelle-Zélande",
         "period": "2017 - 2019"
       },
       {
-        "degree": "Classes Preparatoires - Hypokhagne (Lettres)",
-        "institution": "Lycee La Perouse, Noumea",
-        "period": "Fevrier - Mai 2016"
+        "degree": "Classes Préparatoires - Hypokhâgne (Lettres)",
+        "institution": "Lycée Lapérouse, Nouméa, Nouvelle-Calédonie",
+        "period": "Février - Mai 2016"
       },
       {
-        "degree": "Baccalaureat General Scientifique",
-        "institution": "Lycee Blaise Pascal, Noumea",
+        "degree": "Baccalauréat Général Scientifique",
+        "institution": "Lycée Blaise Pascal, Nouméa, Nouvelle-Calédonie",
         "period": "2013 - 2015"
       }
     ]
   },
   "skills": {
-    "title": "Competences",
-    "technicalTitle": "Competences Techniques",
+    "title": "Compétences",
+    "technicalTitle": "Compétences Techniques",
     "softTitle": "Aptitudes Comportementales",
     "technical": {
-      "Gestion de Projet & Methodologies": ["Agile (Scrum, Kanban)", "Cycle en V", "Cadrage de Projet", "Pilotage de Projet", "Gestion des Parties Prenantes", "Gestion du Changement", "Gestion des Risques"],
-      "Gouvernance & Frameworks": ["Matrice RACI", "Priorisation MoSCoW", "Matrice des Risques", "Matrice de Decision", "Cartographie des Parties Prenantes", "Analyse d'Impact Reglementaire"],
-      "Data, IA & Conformite": ["RGPD", "Privacy by Design", "Audit de Biais", "Ethique de l'IA", "IA Generative", "Gouvernance des Donnees", "IA Responsable"],
-      "Outils & Technologies": ["Jira", "Confluence", "Trello", "Monday", "Pack Microsoft Office", "Python (Bases)", "SQL (Bases)"]
+      "Gestion de Projet & Méthodologies": ["Agile (Scrum, Kanban)", "Cycle en V", "Cadrage de Projet", "Pilotage de Projet", "Gestion des Parties Prenantes", "Gestion du Changement", "Coordination d'Équipes Transverses", "Gestion des Risques"],
+      "Gouvernance & Frameworks": ["Matrice RACI", "Priorisation MoSCoW", "Matrice des Risques", "Matrice de Décision", "Cartographie des Parties Prenantes", "Analyse d'Impact Réglementaire"],
+      "Data, IA & Conformité": ["RGPD", "Privacy by Design", "Audit de Biais", "Éthique de l'IA", "IA Générative", "Gouvernance des Données", "Conformité Numérique", "IA Responsable"],
+      "Outils & Technologies": ["Jira", "Confluence", "Trello", "Monday", "Pack Microsoft Office", "Python", "SQL"]
     },
     "soft": [
       "Vulgarisation Technique (Tech to Business)",
-      "Leadership d'Equipes Pluridisciplinaires",
-      "Ecoute Active",
+      "Leadership d'Équipes Pluridisciplinaires",
+      "Écoute Active",
       "Esprit Critique",
-      "Vision Ethique des Donnees",
-      "Proactivite",
-      "Adaptabilite"
+      "Vision Éthique des Données",
+      "Proactivité",
+      "Adaptabilité"
     ]
   },
   "projects": {
-    "title": "Projets Cles",
+    "title": "Projets Clés",
     "items": [
       {
-        "name": "Strategie Numerique & Alignement de l'Ecosysteme",
-        "company": "Gouvernement de la Polynesie Francaise",
+        "name": "Stratégie Numérique & Alignement de l'Écosystème",
+        "company": "Gouvernement de la Polynésie Française",
         "year": "2024",
         "metric": { "value": "30+", "label": "Parties Prenantes" },
-        "description": "Participation a la construction d'une cartographie complete de 30+ acteurs publics et prives pour aligner les feuilles de route des filieres numerique et audiovisuel de la Polynesie francaise. Contribution au rapprochement des objectifs de politique publique avec les plans d'execution operationnels."
+        "description": "Participation à la construction d'une cartographie complète de 30+ acteurs publics et privés pour aligner les feuilles de route des filières numérique et audiovisuel de la Polynésie française. Contribution au rapprochement des objectifs de politique publique avec les plans d'exécution opérationnels."
       },
       {
-        "name": "Livraison de POCs en IA Generative (x2)",
-        "company": "Credit Agricole S.A",
+        "name": "Livraison de POCs en IA Générative (x2)",
+        "company": "Crédit Agricole S.A, DataLab",
         "year": "2023",
-        "metric": { "value": "2", "label": "POCs Livres" },
-        "description": "Cadrage et livraison de 2 Preuves de Concept en IA Generative au sein d'un grand etablissement bancaire francais. Application de la priorisation MoSCoW pour isoler les fonctionnalites critiques et garantir des livrables testables dans un delai de 4 mois."
+        "metric": { "value": "2", "label": "POCs Livrés" },
+        "description": "Cadrage et livraison de 2 Preuves de Concept en IA Générative au sein d'un grand établissement bancaire français. Application de la priorisation MoSCoW pour isoler les fonctionnalités critiques et garantir des livrables testables dans un délai de 4 mois."
       },
       {
-        "name": "Evaluation des Risques Reglementaires",
-        "company": "Gouvernement de la Polynesie Francaise",
+        "name": "Évaluation des Risques Réglementaires",
+        "company": "Gouvernement de la Polynésie Française",
         "year": "2024",
         "metric": { "value": "10", "label": "Points de Risque" },
-        "description": "Analyse d'impact reglementaire sur 2 projets d'infrastructures publiques via une methodologie formelle de Matrice des Risques, identifiant 10 points de risque juridiques et techniques en amont des appels d'offres."
+        "description": "Analyse d'impact réglementaire sur 2 projets d'infrastructures publiques via une méthodologie formelle de Matrice des Risques, identifiant 10 points de risque juridiques et techniques en amont des appels d'offres."
       },
       {
-        "name": "Reduction de la Fracture Numerique",
-        "company": "Gouvernement de la Polynesie Francaise",
+        "name": "Réduction de la Fracture Numérique",
+        "company": "Gouvernement de la Polynésie Française",
         "year": "2024",
         "metric": { "value": "2", "label": "Zones Blanches" },
-        "description": "Conception et application d'une Matrice de Decision multicriteres pour prioriser les zones d'intervention, permettant des actions ciblees sur 2 zones blanches pour l'acces au haut debit sur un plan de 12 mois."
+        "description": "Conception et application d'une Matrice de Décision multicritères pour prioriser les zones d'intervention, permettant des actions ciblées sur 2 zones blanches pour l'accès au haut débit sur un plan de 12 mois."
       },
       {
         "name": "Programme Veille IA Green",
-        "company": "Credit Agricole S.A",
+        "company": "Crédit Agricole S.A, DataLab",
         "year": "2023",
         "metric": { "value": "90%", "label": "Satisfaction" },
-        "description": "Conception et animation d'ateliers internes sur les pratiques d'IA responsable et durable. Mise en place d'un systeme de feedback quantitatif ayant enregistre un taux de satisfaction de 90% aupres des participants techniques et metier."
+        "description": "Conception et animation d'ateliers internes sur les pratiques d'IA responsable et durable. Mise en place d'un système de feedback quantitatif ayant enregistré un taux de satisfaction de 90% auprès des participants techniques et métier."
       }
     ]
   },
@@ -197,39 +199,39 @@
         "name": "Agile PM Certification",
         "issuer": "",
         "year": "2023",
-        "description": "Certification en methodologie de gestion de projet Agile"
+        "description": "Certification en méthodologie de gestion de projet Agile"
       },
       {
-        "name": "Elements of AI - IA & Ethique",
+        "name": "Elements of AI - IA & Éthique",
         "issuer": "University of Helsinki / MinnaLearn",
         "year": "2025",
-        "description": "Comprehension des algorithmes, Machine Learning et reseaux de neurones. Focus sur l'Ethique de l'IA, biais algorithmiques et impacts societaux."
+        "description": "Compréhension des algorithmes, Machine Learning et réseaux de neurones. Focus sur l'Éthique de l'IA, biais algorithmiques et impacts sociétaux."
       },
       {
-        "name": "L'Atelier RGPD - Protection des Donnees",
+        "name": "L'Atelier RGPD - Protection des Données",
         "issuer": "CNIL",
         "year": "2025-2026",
-        "description": "Maitrise du cadre legal (RGPD), droits des personnes et obligations des acteurs. Gestion de la conformite, Accountability et securite des donnees."
+        "description": "Maîtrise du cadre légal (RGPD), droits des personnes et obligations des acteurs. Gestion de la conformité, Accountability et sécurité des données."
       },
       {
         "name": "Cambridge Advanced English (CAE) C1",
         "issuer": "Cambridge",
-        "year": "",
-        "description": "Certification de competence professionnelle en anglais"
+        "year": "2025",
+        "description": "Certification de compétence professionnelle en anglais"
       }
     ]
   },
   "languages": {
     "title": "Langues",
     "items": [
-      { "name": "Francais", "level": "Langue maternelle", "percent": 100 },
+      { "name": "Français", "level": "Langue maternelle", "percent": 100 },
       { "name": "Anglais", "level": "C1 (Cambridge CAE)", "percent": 85 },
       { "name": "Espagnol", "level": "B2", "percent": 65 },
-      { "name": "Vietnamien", "level": "Debutant", "percent": 20 }
+      { "name": "Vietnamien", "level": "Débutant", "percent": 20 }
     ]
   },
   "hobbies": {
-    "title": "Loisirs & Interets",
+    "title": "Loisirs & Intérêts",
     "items": [
       { "name": "Yoga & Pilates", "icon": "yoga" },
       { "name": "Gastronomie", "icon": "gastronomy" },
@@ -239,7 +241,7 @@
   },
   "footer": {
     "contact": "Contact",
-    "copyright": "Kim Hilaire. Tous droits reserves.",
+    "copyright": "Kim Hilaire. Tous droits réservés.",
     "backToTop": "Retour en haut"
   }
 }

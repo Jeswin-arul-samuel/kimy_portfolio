@@ -61,3 +61,13 @@ section[id] {
 .gauge-ring circle:nth-child(2) {
   animation: gauge-fill 1.5s ease-out forwards;
 }
+
+/* Page transition */
+.page-transition {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.page-transition.page-visible {
+  opacity: 1;
+}
