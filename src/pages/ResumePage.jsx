@@ -112,43 +112,18 @@ export default function ResumePage() {
             <h2 contentEditable={editable} suppressContentEditableWarning>Langues</h2>
 
             <div className="resume-lang-item">
-              <div className="resume-lang-label">
-                <span contentEditable={editable} suppressContentEditableWarning>Français</span>
-                <span contentEditable={editable} suppressContentEditableWarning>Maternelle</span>
-              </div>
-              <div className="resume-lang-bar">
-                <div className="resume-lang-fill" style={{ width: '100%' }} />
-              </div>
+              <span contentEditable={editable} suppressContentEditableWarning>Français</span>
+              <span className="resume-lang-level" contentEditable={editable} suppressContentEditableWarning>Maternelle</span>
             </div>
 
             <div className="resume-lang-item">
-              <div className="resume-lang-label">
-                <span contentEditable={editable} suppressContentEditableWarning>Anglais</span>
-                <span contentEditable={editable} suppressContentEditableWarning>C1 (CAE)</span>
-              </div>
-              <div className="resume-lang-bar">
-                <div className="resume-lang-fill" style={{ width: '85%' }} />
-              </div>
+              <span contentEditable={editable} suppressContentEditableWarning>Anglais</span>
+              <span className="resume-lang-level" contentEditable={editable} suppressContentEditableWarning>C1 (CAE)</span>
             </div>
 
             <div className="resume-lang-item">
-              <div className="resume-lang-label">
-                <span contentEditable={editable} suppressContentEditableWarning>Espagnol</span>
-                <span contentEditable={editable} suppressContentEditableWarning>B2</span>
-              </div>
-              <div className="resume-lang-bar">
-                <div className="resume-lang-fill" style={{ width: '65%' }} />
-              </div>
-            </div>
-
-            <div className="resume-lang-item">
-              <div className="resume-lang-label">
-                <span contentEditable={editable} suppressContentEditableWarning>Vietnamien</span>
-                <span contentEditable={editable} suppressContentEditableWarning>Débutant</span>
-              </div>
-              <div className="resume-lang-bar">
-                <div className="resume-lang-fill" style={{ width: '20%' }} />
-              </div>
+              <span contentEditable={editable} suppressContentEditableWarning>Vietnamien</span>
+              <span className="resume-lang-level" contentEditable={editable} suppressContentEditableWarning>Débutant</span>
             </div>
           </div>
 
