@@ -453,6 +453,23 @@
   color: #2C3E50;
 }
 
+/* ---------- Reset button ---------- */
+.resume-reset-btn {
+  background: transparent;
+  color: #e07c7c;
+  border: 1.5px solid #e07c7c;
+  padding: 7px 18px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.resume-reset-btn:hover {
+  background: rgba(224, 124, 124, 0.15);
+}
+
 /* ---------- Edit-mode visual cues ---------- */
 
 /* Right panel (white bg): light gold on hover/focus */
