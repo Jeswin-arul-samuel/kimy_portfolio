@@ -369,7 +369,7 @@
 
 /* QR Code */
 .resume-qr-section {
-  margin-top: auto;
+  margin-top: 0;
 }
 
 .resume-qr-wrapper {
