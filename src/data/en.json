@@ -182,12 +182,6 @@
     "title": "Certifications",
     "items": [
       {
-        "name": "Agile PM Certification",
-        "issuer": "",
-        "year": "2023",
-        "description": "Agile project management methodology certification"
-      },
-      {
         "name": "Elements of AI - AI & Ethics",
         "issuer": "University of Helsinki / MinnaLearn",
         "year": "2025",
@@ -204,6 +198,12 @@
         "issuer": "Cambridge",
         "year": "2025",
         "description": "Professional-level English proficiency certification"
+      },
+      {
+        "name": "Agile PM Certification",
+        "issuer": "",
+        "year": "2023",
+        "description": "Agile project management methodology certification"
       }
     ]
   },

@@ -35,7 +35,7 @@
 .resume-sidebar {
   background: var(--sidebar-bg);
   color: var(--sidebar-text);
-  padding: 28px 20px 20px;
+  padding: 24px 20px;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -184,7 +184,7 @@
 
 /* ---------- Main content ---------- */
 .resume-main {
-  padding: 28px 28px 20px 24px;
+  padding: 24px 24px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -368,6 +368,10 @@
 }
 
 /* QR Code */
+.resume-qr-section {
+  margin-top: auto;
+}
+
 .resume-qr-wrapper {
   display: flex;
   flex-direction: column;

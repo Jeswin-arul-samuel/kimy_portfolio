@@ -338,10 +338,10 @@ export default function ResumePage() {
           <section className="resume-section">
             <h2 data-key="cert-title" contentEditable={editable} suppressContentEditableWarning>Certifications</h2>
             <ul className="resume-cert-list">
-              <li data-key="cert-1" contentEditable={editable} suppressContentEditableWarning>Agile PM Certification <span className="resume-cert-year">(2023)</span></li>
-              <li data-key="cert-2" contentEditable={editable} suppressContentEditableWarning>Elements of AI – IA &amp; Éthique, University of Helsinki <span className="resume-cert-year">(2025)</span></li>
-              <li data-key="cert-3" contentEditable={editable} suppressContentEditableWarning>L'Atelier RGPD – Protection des Données, CNIL <span className="resume-cert-year">(2025)</span></li>
-              <li data-key="cert-4" contentEditable={editable} suppressContentEditableWarning>Cambridge Advanced English (CAE) C1 <span className="resume-cert-year">(2025)</span></li>
+              <li data-key="cert-1" contentEditable={editable} suppressContentEditableWarning>Elements of AI – IA &amp; Éthique, University of Helsinki <span className="resume-cert-year">(2025)</span></li>
+              <li data-key="cert-2" contentEditable={editable} suppressContentEditableWarning>L'Atelier RGPD – Protection des Données, CNIL <span className="resume-cert-year">(2025)</span></li>
+              <li data-key="cert-3" contentEditable={editable} suppressContentEditableWarning>Cambridge Advanced English (CAE) C1 <span className="resume-cert-year">(2025)</span></li>
+              <li data-key="cert-4" contentEditable={editable} suppressContentEditableWarning>Agile PM Certification <span className="resume-cert-year">(2023)</span></li>
             </ul>
           </section>
         </main>

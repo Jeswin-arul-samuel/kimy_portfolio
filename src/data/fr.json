@@ -182,12 +182,6 @@
     "title": "Certifications",
     "items": [
       {
-        "name": "Agile PM Certification",
-        "issuer": "",
-        "year": "2023",
-        "description": "Certification en méthodologie de gestion de projet Agile"
-      },
-      {
         "name": "Elements of AI - IA & Éthique",
         "issuer": "University of Helsinki / MinnaLearn",
         "year": "2025",
@@ -204,6 +198,12 @@
         "issuer": "Cambridge",
         "year": "2025",
         "description": "Certification de compétence professionnelle en anglais"
+      },
+      {
+        "name": "Agile PM Certification",
+        "issuer": "",
+        "year": "2023",
+        "description": "Certification en méthodologie de gestion de projet Agile"
       }
     ]
   },
