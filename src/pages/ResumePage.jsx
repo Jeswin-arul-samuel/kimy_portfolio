@@ -328,14 +328,6 @@ export default function ResumePage() {
                 <span className="resume-project-meta" data-key="proj2-meta" contentEditable={editable} suppressContentEditableWarning>Crédit Agricole S.A, 2023</span>
               </li>
               <li>
-                <span data-key="proj3-name" contentEditable={editable} suppressContentEditableWarning>Évaluation des Risques Réglementaires</span>
-                <span className="resume-project-meta" data-key="proj3-meta" contentEditable={editable} suppressContentEditableWarning>Gouv. Polynésie Française, 2024</span>
-              </li>
-              <li>
-                <span data-key="proj4-name" contentEditable={editable} suppressContentEditableWarning>Réduction de la Fracture Numérique</span>
-                <span className="resume-project-meta" data-key="proj4-meta" contentEditable={editable} suppressContentEditableWarning>Gouv. Polynésie Française, 2024</span>
-              </li>
-              <li>
                 <span data-key="proj5-name" contentEditable={editable} suppressContentEditableWarning>Programme Veille IA Green</span>
                 <span className="resume-project-meta" data-key="proj5-meta" contentEditable={editable} suppressContentEditableWarning>Crédit Agricole S.A, 2023</span>
               </li>

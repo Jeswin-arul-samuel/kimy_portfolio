@@ -170,20 +170,6 @@
         "description": "Cadrage et livraison de 2 Preuves de Concept en IA Générative au sein d'un grand établissement bancaire français. Application de la priorisation MoSCoW pour isoler les fonctionnalités critiques et garantir des livrables testables dans un délai de 4 mois."
       },
       {
-        "name": "Évaluation des Risques Réglementaires",
-        "company": "Gouvernement de la Polynésie Française",
-        "year": "2024",
-        "metric": { "value": "10", "label": "Points de Risque" },
-        "description": "Analyse d'impact réglementaire sur 2 projets d'infrastructures publiques via une méthodologie formelle de Matrice des Risques, identifiant 10 points de risque juridiques et techniques en amont des appels d'offres."
-      },
-      {
-        "name": "Réduction de la Fracture Numérique",
-        "company": "Gouvernement de la Polynésie Française",
-        "year": "2024",
-        "metric": { "value": "2", "label": "Zones Blanches" },
-        "description": "Conception et application d'une Matrice de Décision multicritères pour prioriser les zones d'intervention, permettant des actions ciblées sur 2 zones blanches pour l'accès au haut débit sur un plan de 12 mois."
-      },
-      {
         "name": "Programme Veille IA Green",
         "company": "Crédit Agricole S.A, DataLab",
         "year": "2023",

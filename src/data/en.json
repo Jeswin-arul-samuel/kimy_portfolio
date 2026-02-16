@@ -170,20 +170,6 @@
         "description": "Scoped and delivered 2 Generative AI Proofs of Concept within a major French banking institution. Applied MoSCoW prioritization to isolate critical features and ensure testable deliverables within a 4-month timeline."
       },
       {
-        "name": "Regulatory Risk Assessment for Public Digital Infrastructure",
-        "company": "Government of French Polynesia",
-        "year": "2024",
-        "metric": { "value": "10", "label": "Risk Points" },
-        "description": "Performed regulatory impact analysis on 2 public infrastructure projects using a formal Risk Matrix methodology, identifying 10 legal and technical risk points ahead of public tenders."
-      },
-      {
-        "name": "Digital Divide Reduction - Territorial Prioritization",
-        "company": "Government of French Polynesia",
-        "year": "2024",
-        "metric": { "value": "2", "label": "White Zones" },
-        "description": "Designed and applied a multi-criteria Decision Matrix to prioritize intervention zones, enabling targeted action on 2 white zones for broadband access over a 12-month plan."
-      },
-      {
         "name": "Green AI Watch Program",
         "company": "Credit Agricole S.A, DataLab",
         "year": "2023",
