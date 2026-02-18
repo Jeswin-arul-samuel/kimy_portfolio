@@ -5,7 +5,7 @@ import { jsPDF } from 'jspdf'
 import { QRCodeSVG } from 'qrcode.react'
 import './Resume.css'
 
-const STORAGE_KEY = 'resume_edits'
+const STORAGE_KEY = 'resume_edits_v2'
 
 export default function ResumePage() {
   const resumeRef = useRef(null)
