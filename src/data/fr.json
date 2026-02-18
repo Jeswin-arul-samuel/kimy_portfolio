@@ -24,9 +24,9 @@
   },
   "metrics": {
     "items": [
-      { "value": 2, "suffix": "", "label": "Années d'Expérience" },
-      { "value": 30, "suffix": "+", "label": "Parties Prenantes" },
-      { "value": 90, "suffix": "%", "label": "Satisfaction Équipe" },
+      { "value": 2, "suffix": "", "label": "Années d'expérience" },
+      { "value": 30, "suffix": "+", "label": "Parties prenantes" },
+      { "value": 90, "suffix": "%", "label": "Satisfaction équipe" },
       { "value": 4, "suffix": "", "label": "Pays" }
     ]
   },
@@ -42,9 +42,9 @@
     "title": "Expériences Professionnelles",
     "roles": [
       {
-        "position": "Chargée de Mission - Numérique & Audiovisuel",
+        "position": "Chargée de Mission – Numérique & Audiovisuel",
         "company": "Gouvernement de la Polynésie Française",
-        "period": "Mars 2024 - Novembre 2024",
+        "period": "Mars 2024 – Novembre 2024",
         "duration": "8 mois",
         "metrics": ["30+ parties prenantes", "3 axes politiques", "10 points de risque"],
         "bullets": [
@@ -57,21 +57,21 @@
         ]
       },
       {
-        "position": "Assistante Chef de Projet - Data & IA",
+        "position": "Assistante Chef de Projet – Data & IA",
         "company": "Crédit Agricole S.A, DataLab (Paris)",
-        "period": "Juin 2023 - Novembre 2023",
+        "period": "Juin 2023 – Novembre 2023",
         "duration": "5 mois",
         "metrics": ["Équipe de 10", "90% satisfaction", "15% plus rapide"],
         "bullets": [
           "Structuration de la collaboration d'une équipe transverse de 10 personnes (Data Scientists, Développeurs, Data Engineers) via une Matrice RACI, réduisant les temps de latence décisionnelle de 15% durant la phase de cadrage des POCs",
-          "Cadrage et arbitrage fonctionnel de 2 POCs (Preuves de Concept) en IA Générative via la méthode MoSCoW, isolant les fonctionnalités critiques (\u00ab Must Have \u00bb) pour garantir un livrable testable en moins de 4 mois",
+          "Cadrage et arbitrage fonctionnel de 2 POCs (Preuves de Concept) en IA Générative via la méthode MoSCoW, isolant les fonctionnalités critiques (« Must Have ») pour garantir un livrable testable en moins de 4 mois",
           "Pilotage des ateliers \"Veille IA Green\" et mesure de l'adhésion via une Grille de feedback quantitative, obtenant un taux de satisfaction de 90% auprès des équipes techniques et métier"
         ]
       },
       {
-        "position": "Assistante Marketing - Développement Commercial",
+        "position": "Assistante Marketing – Développement Commercial",
         "company": "Les Belles Envies (Paris)",
-        "period": "Septembre 2021 - Décembre 2021",
+        "period": "Septembre 2021 – Décembre 2021",
         "duration": "3 mois",
         "metrics": [],
         "bullets": [
@@ -84,7 +84,7 @@
       {
         "position": "Assistante Marketing",
         "company": "American Express OFINA (Tahiti)",
-        "period": "Février 2021 - Août 2021",
+        "period": "Février 2021 – Août 2021",
         "duration": "6 mois",
         "metrics": [],
         "bullets": [
@@ -96,7 +96,7 @@
       {
         "position": "Assistante Marketing & Communication",
         "company": "Air Calédonie (Nouvelle-Calédonie)",
-        "period": "Janvier 2018 - Mars 2018",
+        "period": "Janvier 2018 – Mars 2018",
         "duration": "2 mois",
         "metrics": [],
         "bullets": [
@@ -110,44 +110,44 @@
     "title": "Formations",
     "degrees": [
       {
-        "degree": "Master en Management PGE / MSc Artificial Intelligence for Business Transformation (AIBT)",
+        "degree": "MSc AI for Business Transformation",
         "institution": "Skema Business School / ESIEA France",
-        "period": "2020 - 2023",
+        "period": "2020 – 2023"
+      },
+      {
+        "degree": "Master en Management International Programme Grande École",
+        "institution": "Skema Business School / ESIEA France",
+        "period": "2020 – 2023",
         "note": "2021 année de césure professionnelle"
       },
       {
-        "degree": "Bachelor de Commerce - Double Majeurs : Commerce International & Management",
+        "degree": "Bachelor de Commerce – International & Management",
         "institution": "Université d'Auckland, Nouvelle-Zélande",
-        "period": "2017 - 2019"
-      },
-      {
-        "degree": "Classes Préparatoires - Hypokhâgne (Lettres)",
-        "institution": "Lycée Lapérouse, Nouméa, Nouvelle-Calédonie",
-        "period": "Février - Mai 2016"
+        "period": "2017 – 2019"
       },
       {
         "degree": "Baccalauréat Général Scientifique",
         "institution": "Lycée Blaise Pascal, Nouméa, Nouvelle-Calédonie",
-        "period": "2013 - 2015"
+        "period": "2013 – 2015"
       }
     ]
   },
   "skills": {
     "title": "Compétences",
-    "technicalTitle": "Compétences Techniques",
-    "softTitle": "Aptitudes Comportementales",
+    "technicalTitle": "Compétences techniques",
+    "softTitle": "Aptitudes comportementales",
     "technical": {
-      "Gestion de Projet & Méthodologies": ["Agile (Scrum, Kanban)", "Cycle en V", "Cadrage de Projet", "Pilotage de Projet", "Gestion des Parties Prenantes", "Gestion du Changement", "Coordination d'Équipes Transverses", "Gestion des Risques"],
-      "Gouvernance & Frameworks": ["Matrice RACI", "Priorisation MoSCoW", "Matrice des Risques", "Matrice de Décision", "Cartographie des Parties Prenantes", "Analyse d'Impact Réglementaire"],
-      "Data, IA & Conformité": ["RGPD", "Privacy by Design", "Audit de Biais", "Éthique de l'IA", "IA Générative", "Gouvernance des Données", "Conformité Numérique", "IA Responsable"],
-      "Outils & Technologies": ["Jira", "Confluence", "Trello", "Monday", "Pack Microsoft Office", "Python", "SQL"]
+      "Gestion de projet & méthodologies": ["Agile (Scrum, Kanban)", "Cycle en V", "Cadrage de projet", "Pilotage de projet", "Gestion des parties prenantes", "Gestion du changement", "Coordination d'équipes transverses", "Gestion des risques"],
+      "Gouvernance & frameworks": ["Matrice RACI", "Priorisation MoSCoW", "Matrice des risques", "Matrice de décision", "Cartographie des parties prenantes", "Analyse d'impact réglementaire"],
+      "Data, IA & conformité": ["RGPD", "Privacy by Design", "Audit de biais", "Éthique de l'IA", "IA générative", "Gouvernance des données", "Conformité numérique", "IA responsable"],
+      "Outils & technologies": ["Jira", "Confluence", "Trello", "Monday", "Pack Microsoft Office", "Python", "SQL"]
     },
     "soft": [
-      "Vulgarisation Technique (Tech to Business)",
-      "Leadership d'Équipes Pluridisciplinaires",
-      "Écoute Active",
-      "Esprit Critique",
-      "Vision Éthique des Données",
+      "Vulgarisation technique (Tech to Business)",
+      "Leadership d'équipes pluridisciplinaires",
+      "Écoute active",
+      "Esprit critique",
+      "Vision éthique des données",
       "Proactivité",
       "Adaptabilité"
     ]
@@ -159,15 +159,29 @@
         "name": "Stratégie Numérique & Alignement de l'Écosystème",
         "company": "Gouvernement de la Polynésie Française",
         "year": "2024",
-        "metric": { "value": "30+", "label": "Parties Prenantes" },
+        "metric": { "value": "30+", "label": "Parties prenantes" },
         "description": "Participation à la construction d'une cartographie complète de 30+ acteurs publics et privés pour aligner les feuilles de route des filières numérique et audiovisuel de la Polynésie française. Contribution au rapprochement des objectifs de politique publique avec les plans d'exécution opérationnels."
       },
       {
-        "name": "Livraison de POCs en IA Générative (x2)",
+        "name": "Livraison de POCs en IA générative (x2)",
         "company": "Crédit Agricole S.A, DataLab",
         "year": "2023",
-        "metric": { "value": "2", "label": "POCs Livrés" },
+        "metric": { "value": "2", "label": "POCs livrés" },
         "description": "Cadrage et livraison de 2 Preuves de Concept en IA Générative au sein d'un grand établissement bancaire français. Application de la priorisation MoSCoW pour isoler les fonctionnalités critiques et garantir des livrables testables dans un délai de 4 mois."
+      },
+      {
+        "name": "Réduction de la fracture numérique",
+        "company": "Gouvernement de la Polynésie Française",
+        "year": "2024",
+        "metric": { "value": "2", "label": "Zones prioritaires" },
+        "description": "Priorisation des zones d'intervention de la DGEN pour la réduction de la fracture numérique via une Matrice de Décision multicritères, ciblant 2 zones blanches prioritaires pour les 12 mois suivants."
+      },
+      {
+        "name": "Évaluation des risques réglementaires",
+        "company": "Gouvernement de la Polynésie Française",
+        "year": "2024",
+        "metric": { "value": "10", "label": "Points de risque" },
+        "description": "Analyse d'impact réglementaire sur 2 projets d'infrastructures publiques via une Matrice des Risques, identifiant 10 points de vigilance juridiques et techniques avant le lancement des appels d'offres."
       },
       {
         "name": "Programme Veille IA Green",
@@ -182,15 +196,15 @@
     "title": "Certifications",
     "items": [
       {
-        "name": "Elements of AI - IA & Éthique",
-        "issuer": "University of Helsinki / MinnaLearn",
+        "name": "Elements of AI – IA & Éthique",
+        "issuer": "University of Helsinki",
         "year": "2025",
         "description": "Compréhension des algorithmes, Machine Learning et réseaux de neurones. Focus sur l'Éthique de l'IA, biais algorithmiques et impacts sociétaux."
       },
       {
-        "name": "L'Atelier RGPD - Protection des Données",
+        "name": "L'Atelier RGPD – Protection des Données",
         "issuer": "CNIL",
-        "year": "2025-2026",
+        "year": "2025",
         "description": "Maîtrise du cadre légal (RGPD), droits des personnes et obligations des acteurs. Gestion de la conformité, Accountability et sécurité des données."
       },
       {
@@ -210,18 +224,17 @@
   "languages": {
     "title": "Langues",
     "items": [
-      { "name": "Français", "level": "Langue maternelle", "percent": 100 },
-      { "name": "Anglais", "level": "C1 (Cambridge CAE)", "percent": 85 },
-      { "name": "Espagnol", "level": "B2", "percent": 65 },
+      { "name": "Français", "level": "Maternelle", "percent": 100 },
+      { "name": "Anglais", "level": "C1 (CAE)", "percent": 85 },
       { "name": "Vietnamien", "level": "Débutant", "percent": 20 }
     ]
   },
   "hobbies": {
-    "title": "Loisirs & Intérêts",
+    "title": "Loisirs",
     "items": [
       { "name": "Yoga & Pilates", "icon": "yoga" },
       { "name": "Gastronomie", "icon": "gastronomy" },
-      { "name": "Danse Contemporaine", "icon": "dance" },
+      { "name": "Danse contemporaine", "icon": "dance" },
       { "name": "Jeunes IHEDN", "icon": "defense" }
     ]
   },

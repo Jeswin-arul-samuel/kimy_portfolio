@@ -136,12 +136,12 @@ export default function ResumePage() {
             <h2 data-key="skills-title" contentEditable={editable} suppressContentEditableWarning>Compétences</h2>
             <ul className="resume-skills-list">
               <li data-key="skill-1" contentEditable={editable} suppressContentEditableWarning>Agile (Scrum, Kanban)</li>
-              <li data-key="skill-2" contentEditable={editable} suppressContentEditableWarning>Cadrage &amp; Pilotage de Projet</li>
-              <li data-key="skill-3" contentEditable={editable} suppressContentEditableWarning>Gestion des Parties Prenantes</li>
+              <li data-key="skill-2" contentEditable={editable} suppressContentEditableWarning>Cadrage &amp; pilotage de projet</li>
+              <li data-key="skill-3" contentEditable={editable} suppressContentEditableWarning>Gestion des parties prenantes</li>
               <li data-key="skill-4" contentEditable={editable} suppressContentEditableWarning>Matrice RACI / MoSCoW</li>
               <li data-key="skill-5" contentEditable={editable} suppressContentEditableWarning>RGPD &amp; Privacy by Design</li>
-              <li data-key="skill-6" contentEditable={editable} suppressContentEditableWarning>IA Générative &amp; Éthique IA</li>
-              <li data-key="skill-7" contentEditable={editable} suppressContentEditableWarning>Gouvernance des Données</li>
+              <li data-key="skill-6" contentEditable={editable} suppressContentEditableWarning>IA générative &amp; éthique IA</li>
+              <li data-key="skill-7" contentEditable={editable} suppressContentEditableWarning>Gouvernance des données</li>
               <li data-key="skill-8" contentEditable={editable} suppressContentEditableWarning>Jira / Confluence / Trello</li>
               <li data-key="skill-9" contentEditable={editable} suppressContentEditableWarning>Python &amp; SQL</li>
             </ul>
@@ -158,7 +158,7 @@ export default function ResumePage() {
 
             <div className="resume-lang-item">
               <span data-key="lang-2-name" contentEditable={editable} suppressContentEditableWarning>Anglais</span>
-              <span className="resume-lang-level" data-key="lang-2-level" contentEditable={editable} suppressContentEditableWarning>C1 (CAE)</span>
+              <span className="resume-lang-level" data-key="lang-2-level" contentEditable={editable} suppressContentEditableWarning>Courant – C1 (CAE)</span>
             </div>
 
             <div className="resume-lang-item">
@@ -173,7 +173,7 @@ export default function ResumePage() {
             <ul className="resume-hobbies-list">
               <li data-key="hobby-1" contentEditable={editable} suppressContentEditableWarning>Yoga &amp; Pilates</li>
               <li data-key="hobby-2" contentEditable={editable} suppressContentEditableWarning>Gastronomie</li>
-              <li data-key="hobby-3" contentEditable={editable} suppressContentEditableWarning>Danse Contemporaine</li>
+              <li data-key="hobby-3" contentEditable={editable} suppressContentEditableWarning>Danse contemporaine</li>
               <li data-key="hobby-4" contentEditable={editable} suppressContentEditableWarning>Jeunes IHEDN</li>
             </ul>
           </div>

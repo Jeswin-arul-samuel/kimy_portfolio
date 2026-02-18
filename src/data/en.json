@@ -42,9 +42,9 @@
     "title": "Professional Experience",
     "roles": [
       {
-        "position": "Project Officer - Digital & Audiovisual",
+        "position": "Project Officer – Digital & Audiovisual",
         "company": "Government of French Polynesia",
-        "period": "March 2024 - November 2024",
+        "period": "March 2024 – November 2024",
         "duration": "8 months",
         "metrics": ["30+ stakeholders", "3 policy pillars", "10 risk points"],
         "bullets": [
@@ -57,9 +57,9 @@
         ]
       },
       {
-        "position": "Assistant Project Manager - Data & AI",
-        "company": "Credit Agricole S.A, DataLab (Paris)",
-        "period": "June 2023 - November 2023",
+        "position": "Assistant Project Manager – Data & AI",
+        "company": "Crédit Agricole S.A, DataLab (Paris)",
+        "period": "June 2023 – November 2023",
         "duration": "5 months",
         "metrics": ["10-person team", "90% satisfaction", "15% faster decisions"],
         "bullets": [
@@ -69,22 +69,22 @@
         ]
       },
       {
-        "position": "Marketing Assistant - Business Development",
+        "position": "Marketing Assistant – Business Development",
         "company": "Les Belles Envies (Paris)",
-        "period": "September 2021 - December 2021",
+        "period": "September 2021 – December 2021",
         "duration": "3 months",
         "metrics": [],
         "bullets": [
           "Designed product visuals and packaging labels for retail and laboratory lines",
           "Led commercial prospecting efforts and managed client advisory and point-of-sale transactions",
-          "Created DIP (Document d'Information Prealable) documentation for laboratory and retail operations",
+          "Created DIP (Document d'Information Préalable) documentation for laboratory and retail operations",
           "Translated commercial brochures from French to English for international outreach"
         ]
       },
       {
         "position": "Marketing Assistant",
         "company": "American Express OFINA (Tahiti)",
-        "period": "February 2021 - August 2021",
+        "period": "February 2021 – August 2021",
         "duration": "6 months",
         "metrics": [],
         "bullets": [
@@ -95,8 +95,8 @@
       },
       {
         "position": "Marketing & Communication Assistant",
-        "company": "Air Caledonie (New Caledonia)",
-        "period": "January 2018 - March 2018",
+        "company": "Air Calédonie (New Caledonia)",
+        "period": "January 2018 – March 2018",
         "duration": "2 months",
         "metrics": [],
         "bullets": [
@@ -110,25 +110,25 @@
     "title": "Education",
     "degrees": [
       {
-        "degree": "Master in Management PGE / MSc Artificial Intelligence for Business Transformation (AIBT)",
+        "degree": "MSc AI for Business Transformation",
         "institution": "Skema Business School / ESIEA France",
-        "period": "2020 - 2023",
+        "period": "2020 – 2023"
+      },
+      {
+        "degree": "Master in International Management – Grande École Programme",
+        "institution": "Skema Business School / ESIEA France",
+        "period": "2020 – 2023",
         "note": "2021 professional gap year"
       },
       {
-        "degree": "Bachelor of Commerce - Double Majors: International Business & Management",
+        "degree": "Bachelor of Commerce – International & Management",
         "institution": "University of Auckland, New Zealand",
-        "period": "2017 - 2019"
-      },
-      {
-        "degree": "Preparatory Classes - Hypokhagne (Literature)",
-        "institution": "Lycee Laperouse, Noumea, New Caledonia",
-        "period": "February - May 2016"
+        "period": "2017 – 2019"
       },
       {
         "degree": "Scientific Baccalaureate",
-        "institution": "Lycee Blaise Pascal, Noumea, New Caledonia",
-        "period": "2013 - 2015"
+        "institution": "Lycée Blaise Pascal, Nouméa, New Caledonia",
+        "period": "2013 – 2015"
       }
     ]
   },
@@ -164,14 +164,28 @@
       },
       {
         "name": "Generative AI POC Delivery (x2)",
-        "company": "Credit Agricole S.A, DataLab",
+        "company": "Crédit Agricole S.A, DataLab",
         "year": "2023",
         "metric": { "value": "2", "label": "POCs Delivered" },
         "description": "Scoped and delivered 2 Generative AI Proofs of Concept within a major French banking institution. Applied MoSCoW prioritization to isolate critical features and ensure testable deliverables within a 4-month timeline."
       },
       {
+        "name": "Digital Divide Reduction",
+        "company": "Government of French Polynesia",
+        "year": "2024",
+        "metric": { "value": "2", "label": "Priority Zones" },
+        "description": "Prioritization of DGEN intervention zones for digital divide reduction using a multi-criteria Decision Matrix, targeting 2 priority white zones for the following 12 months."
+      },
+      {
+        "name": "Regulatory Risk Assessment",
+        "company": "Government of French Polynesia",
+        "year": "2024",
+        "metric": { "value": "10", "label": "Risk Points" },
+        "description": "Regulatory impact analysis on 2 public infrastructure projects via a Risk Matrix, identifying 10 critical legal and technical watchpoints before launching tenders."
+      },
+      {
         "name": "Green AI Watch Program",
-        "company": "Credit Agricole S.A, DataLab",
+        "company": "Crédit Agricole S.A, DataLab",
         "year": "2023",
         "metric": { "value": "90%", "label": "Satisfaction" },
         "description": "Designed and facilitated internal workshops on responsible and sustainable AI practices. Implemented a quantitative feedback system that recorded a 90% satisfaction rate from technical and business participants."
@@ -182,15 +196,15 @@
     "title": "Certifications",
     "items": [
       {
-        "name": "Elements of AI - AI & Ethics",
-        "issuer": "University of Helsinki / MinnaLearn",
+        "name": "Elements of AI – AI & Ethics",
+        "issuer": "University of Helsinki",
         "year": "2025",
         "description": "Understanding of algorithms, Machine Learning and neural networks. Focus on AI Ethics, algorithmic bias and societal impacts."
       },
       {
-        "name": "L'Atelier RGPD - Data Protection",
+        "name": "L'Atelier RGPD – Data Protection",
         "issuer": "CNIL",
-        "year": "2025-2026",
+        "year": "2025",
         "description": "Mastery of the legal framework (GDPR), rights of individuals and obligations of actors. Compliance management, Accountability and data security."
       },
       {
@@ -211,13 +225,12 @@
     "title": "Languages",
     "items": [
       { "name": "French", "level": "Native", "percent": 100 },
-      { "name": "English", "level": "C1 (Cambridge CAE)", "percent": 85 },
-      { "name": "Spanish", "level": "B2", "percent": 65 },
+      { "name": "English", "level": "C1 (CAE)", "percent": 85 },
       { "name": "Vietnamese", "level": "Beginner", "percent": 20 }
     ]
   },
   "hobbies": {
-    "title": "Hobbies & Interests",
+    "title": "Hobbies",
     "items": [
       { "name": "Yoga & Pilates", "icon": "yoga" },
       { "name": "Gastronomy", "icon": "gastronomy" },
