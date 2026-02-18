@@ -243,7 +243,7 @@ export default function ResumePage() {
 
             <div className="resume-exp-entry">
               <div className="resume-exp-header">
-                <span className="resume-exp-title" data-key="exp3-role" contentEditable={editable} suppressContentEditableWarning>Assistante Marketing – Dév. Commercial</span>
+                <span className="resume-exp-title" data-key="exp3-role" contentEditable={editable} suppressContentEditableWarning>Assistante Marketing – Développement Commercial</span>
                 <span className="resume-exp-period" data-key="exp3-period" contentEditable={editable} suppressContentEditableWarning>Sept. 2021 – Déc. 2021</span>
               </div>
               <div className="resume-exp-company" data-key="exp3-company" contentEditable={editable} suppressContentEditableWarning>Les Belles Envies (Paris)</div>
