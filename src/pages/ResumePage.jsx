@@ -240,7 +240,7 @@ export default function ResumePage() {
               </div>
               <div className="resume-exp-company" data-key="exp2-company" contentEditable={editable} suppressContentEditableWarning>Crédit Agricole S.A, DataLab (Paris)</div>
               <ul className="resume-exp-bullets">
-                <li data-key="exp2-b1" contentEditable={editable} suppressContentEditableWarning>Structuration d'une équipe transverse de 10 personnes via Matrice RACI, -15% latence décisionnelle</li>
+                <li data-key="exp2-b1" contentEditable={editable} suppressContentEditableWarning>Structuration d'une équipe transverse de 10 personnes via une matrice RACI, -15% latence décisionnelle</li>
                 <li data-key="exp2-b2" contentEditable={editable} suppressContentEditableWarning>Cadrage de 2 Preuves de Concept (POCs) en IA Générative via MoSCoW, livrable testable en moins de 4 mois</li>
                 <li data-key="exp2-b3" contentEditable={editable} suppressContentEditableWarning>Pilotage ateliers « Veille IA Green », 90% satisfaction équipes techniques et métier</li>
               </ul>
