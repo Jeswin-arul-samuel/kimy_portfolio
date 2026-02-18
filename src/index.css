@@ -25,6 +25,20 @@ body {
   background-color: var(--color-warm-white);
 }
 
+/* Anti-copy protection (production only, overridden on localhost) */
+body.no-copy {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+body.no-copy img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
 /* Scroll margin for anchor links */
 section[id] {
   scroll-margin-top: 5rem;

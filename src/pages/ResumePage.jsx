@@ -79,27 +79,32 @@ export default function ResumePage() {
     }
   }
 
+  // Only show admin buttons on localhost (not on Vercel)
+  const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+
   // When not editing, attribute is absent (undefined removes it from DOM)
-  const editable = isEditing || undefined
+  const editable = (isEditing && isLocal) || undefined
 
   return (
     <>
       <div className="resume-toolbar">
         <Link to="/" className="resume-back-link">&larr; Retour au site</Link>
-        <div className="resume-toolbar-actions">
-          <button
-            className={`resume-edit-btn${isEditing ? ' active' : ''}`}
-            onClick={handleToggleEdit}
-          >
-            {isEditing ? 'Terminer' : 'Modifier'}
-          </button>
-          <button className="resume-reset-btn" onClick={handleReset}>
-            Réinitialiser
-          </button>
-          <button className="resume-download-btn" onClick={handleDownload}>
-            Télécharger PDF
-          </button>
-        </div>
+        {isLocal && (
+          <div className="resume-toolbar-actions">
+            <button
+              className={`resume-edit-btn${isEditing ? ' active' : ''}`}
+              onClick={handleToggleEdit}
+            >
+              {isEditing ? 'Terminer' : 'Modifier'}
+            </button>
+            <button className="resume-reset-btn" onClick={handleReset}>
+              Réinitialiser
+            </button>
+            <button className="resume-download-btn" onClick={handleDownload}>
+              Télécharger PDF
+            </button>
+          </div>
+        )}
       </div>
 
       <div className={`resume-page${isEditing ? ' is-editing' : ''}`} ref={resumeRef}>
