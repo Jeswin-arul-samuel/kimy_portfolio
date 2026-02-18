@@ -18,7 +18,7 @@
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Kim Hilaire",
-    "headline": "Digital Transformation & Data Project Manager",
+    "headline": "Digital Transformation Data & AI Project Manager",
     "subheadline": "AI Governance | GDPR Compliance | Agile (Scrum/Kanban)",
     "cta": "Discover my work"
   },
@@ -26,13 +26,16 @@
     "items": [
       { "value": 2, "suffix": "", "label": "Years Experience" },
       { "value": 30, "suffix": "+", "label": "Stakeholders Mapped" },
-      { "value": 90, "suffix": "%", "label": "Team Satisfaction" },
       { "value": 4, "suffix": "", "label": "Countries" }
     ]
   },
   "about": {
     "title": "About Me",
-    "text": "Striving for human-centered Data & AI. Born and raised in a multicultural environment, I draw on this open-mindedness to bridge the dialogue between the public and private sectors, convinced that collective intelligence is essential to success. Bilingual French-English with international experience across Europe and Oceania, my journey has forged a proven ability to coordinate multidisciplinary teams within complex ecosystems. My approach seeks the right balance: delivering measurable outcomes through Agile and governance frameworks (GDPR), while making complexity accessible to turn every project into a driver of shared progress and digital acculturation.",
+    "text": [
+      "What drives me: working towards ethical, human-centered Data and AI.",
+      "Born and raised in a multicultural environment, I draw on this open-mindedness to bridge the dialogue between the public and private sectors, convinced that collective intelligence is essential to success.",
+      "Bilingual French-English with international experience across Europe and Oceania, my journey has forged a proven ability to coordinate multidisciplinary teams within complex ecosystems. My approach seeks the right balance: delivering measurable outcomes through Agile and governance frameworks (GDPR), while making complexity accessible to turn every project into a driver of shared progress and digital acculturation."
+    ],
     "email": "kimhilaire@yahoo.fr",
     "phone": "(+33) 6 26 21 13 55",
     "linkedin": "kim hilaire",
@@ -46,10 +49,10 @@
         "company": "Government of French Polynesia",
         "period": "March 2024 – November 2024",
         "duration": "8 months",
-        "metrics": ["30+ stakeholders", "3 policy pillars", "10 risk points"],
+        "metrics": ["20+ stakeholders", "3 policy pillars", "10 risk points"],
         "bullets": [
-          "Mapped 30+ key stakeholders (DGEN, OPT, ISPs) via Stakeholder Mapping, aligning public/private roadmaps for the structuring of the Audiovisual & Digital sectors",
-          "Served as liaison between government leadership and DGEN, translating 3 major public policy pillars into a co-constructed operational roadmap executable by technical services",
+          "Mapped 20+ key stakeholders (DGEN, OPT, ISPs) via Stakeholder Mapping, aligning public/private roadmaps for the structuring of the audiovisual and digital sectors",
+          "Served as liaison between government leadership and DGEN (Direction Générale de l'Économie du Numérique), translating 3 major public policy pillars into a co-constructed operational roadmap executable by technical services",
           "Conducted regulatory impact analysis on 2 public infrastructure projects via a Risk Matrix, identifying 10 critical legal and technical watchpoints before launching tenders",
           "Prioritized DGEN intervention zones for digital divide reduction using a multi-criteria Decision Matrix, targeting 2 priority white zones for the following 12 months",
           "Drafted strategic notes and policy recommendations for the adoption of digital and audiovisual technology projects",
@@ -110,24 +113,24 @@
     "title": "Education",
     "degrees": [
       {
-        "degree": "MSc AI for Business Transformation",
-        "institution": "Skema Business School / ESIEA France",
+        "degree": "MSc Artificial Intelligence\nfor Business Transformation",
+        "institution": "Skema Business School / ESIEA, Paris, France",
         "period": "2020 – 2023"
       },
       {
-        "degree": "Master in International Management – Grande École Programme",
-        "institution": "Skema Business School / ESIEA France",
+        "degree": "Master in International Management –\nGrande École Programme",
+        "institution": "Skema Business School / ESIEA, Paris, France",
         "period": "2020 – 2023",
         "note": "2021 professional gap year"
       },
       {
-        "degree": "Bachelor of Commerce – International & Management",
-        "institution": "University of Auckland, New Zealand",
+        "degree": "Bachelor of Commerce –\nInternational Business & Management",
+        "institution": "University of Auckland, Auckland,\nNew Zealand",
         "period": "2017 – 2019"
       },
       {
         "degree": "Scientific Baccalaureate",
-        "institution": "Lycée Blaise Pascal, Nouméa, New Caledonia",
+        "institution": "Lycée Blaise Pascal, Nouméa,\nNew Caledonia",
         "period": "2013 – 2015"
       }
     ]
@@ -159,15 +162,15 @@
         "name": "Digital Strategy & Stakeholder Ecosystem Alignment",
         "company": "Government of French Polynesia",
         "year": "2024",
-        "metric": { "value": "30+", "label": "Stakeholders" },
-        "description": "Participated in building a comprehensive stakeholder map of 30+ public and private actors to align roadmaps for the digital and audiovisual sectors of French Polynesia. Contributed to bridging public policy objectives with operational execution plans."
+        "metric": { "value": "20+", "label": "Stakeholders" },
+        "description": ["Participated in building a comprehensive stakeholder map of 20+ public and private actors to align roadmaps for the digital and audiovisual sectors of French Polynesia.", "Contributed to bridging public policy objectives with operational execution plans."]
       },
       {
         "name": "Generative AI POC Delivery (x2)",
         "company": "Crédit Agricole S.A, DataLab",
         "year": "2023",
         "metric": { "value": "2", "label": "POCs Delivered" },
-        "description": "Scoped and delivered 2 Generative AI Proofs of Concept within a major French banking institution. Applied MoSCoW prioritization to isolate critical features and ensure testable deliverables within a 4-month timeline."
+        "description": ["Scoped and delivered 2 Generative AI Proofs of Concept within a major French banking institution.", "Applied MoSCoW prioritization to isolate critical features and ensure testable deliverables within a 4-month timeline."]
       },
       {
         "name": "Digital Divide Reduction",
@@ -188,7 +191,7 @@
         "company": "Crédit Agricole S.A, DataLab",
         "year": "2023",
         "metric": { "value": "90%", "label": "Satisfaction" },
-        "description": "Designed and facilitated internal workshops on responsible and sustainable AI practices. Implemented a quantitative feedback system that recorded a 90% satisfaction rate from technical and business participants."
+        "description": ["Designed and facilitated internal workshops on responsible and sustainable AI practices.", "Implemented a quantitative feedback system that recorded a 90% satisfaction rate from technical and business participants."]
       }
     ]
   },
@@ -197,8 +200,8 @@
     "items": [
       {
         "name": "Elements of AI – AI & Ethics",
-        "issuer": "University of Helsinki",
-        "year": "2025",
+        "issuer": "University of Helsinki, MinnaLearn",
+        "year": "2026",
         "description": "Understanding of algorithms, Machine Learning and neural networks. Focus on AI Ethics, algorithmic bias and societal impacts."
       },
       {
@@ -211,22 +214,22 @@
         "name": "Cambridge Advanced English (CAE) C1",
         "issuer": "Cambridge",
         "year": "2025",
-        "description": "Professional-level English proficiency certification"
+        "description": "Professional-level English proficiency certification."
       },
       {
         "name": "Agile PM Certification",
-        "issuer": "",
+        "issuer": "APMG International",
         "year": "2023",
-        "description": "Agile project management methodology certification"
+        "description": "Agile project management methodology certification."
       }
     ]
   },
   "languages": {
     "title": "Languages",
     "items": [
-      { "name": "French", "level": "Native", "percent": 100 },
-      { "name": "English", "level": "C1 (CAE)", "percent": 85 },
-      { "name": "Vietnamese", "level": "Beginner", "percent": 20 }
+      { "name": "French", "level": "Native", "blocks": 6, "tooltip": "Native speaker – Full proficiency" },
+      { "name": "English", "level": "Fluent – C1 (CAE)", "blocks": 5.5, "tooltip": "Fluent – Advanced professional proficiency" },
+      { "name": "Vietnamese", "level": "Beginner", "blocks": 2.5, "tooltip": "Beginner – Basic notions" }
     ]
   },
   "hobbies": {

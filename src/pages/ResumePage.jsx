@@ -109,7 +109,7 @@ export default function ResumePage() {
 
           <div className="resume-sidebar-name">
             <h1 data-key="sidebar-name" contentEditable={editable} suppressContentEditableWarning>Kim Hilaire</h1>
-            <p data-key="sidebar-title" contentEditable={editable} suppressContentEditableWarning>Chef de Projet<br />Transformation Digitale &amp; Data</p>
+            <p data-key="sidebar-title" contentEditable={editable} suppressContentEditableWarning>Chef de Projet<br />Transformation Digitale<br />Data &amp; IA</p>
           </div>
 
           {/* Contact */}
@@ -126,7 +126,7 @@ export default function ResumePage() {
               </li>
               <li>
                 <span className="resume-contact-icon">in</span>
-                <a href="https://www.linkedin.com/in/kim-h-618bb9202/" target="_blank" rel="noopener noreferrer" className="resume-contact-link" data-key="contact-linkedin" contentEditable={editable} suppressContentEditableWarning>linkedin.com/in/kim-h-618bb9202</a>
+                <a href="https://www.linkedin.com/in/kim-h-618bb9202/" target="_blank" rel="noopener noreferrer" className="resume-contact-link" data-key="contact-linkedin" contentEditable={editable} suppressContentEditableWarning>kim hilaire</a>
               </li>
             </ul>
           </div>
@@ -200,15 +200,14 @@ export default function ResumePage() {
           <section className="resume-section resume-profil">
             <h2 data-key="profil-title" contentEditable={editable} suppressContentEditableWarning>Profil</h2>
             <p data-key="profil-text" contentEditable={editable} suppressContentEditableWarning>
-              Œuvrer pour une Data &amp; IA centrée sur l'humain. Née et grandie dans un environnement
-              multiculturel, je m'appuie sur cette ouverture d'esprit pour faciliter le dialogue entre
-              le secteur public et privé, convaincue que l'intelligence collective est essentielle à
-              la réussite. Bilingue français-anglais avec
-              une expérience internationale en Europe et en Océanie, mon parcours m'a forgée une
-              capacité prouvée à coordonner des équipes pluridisciplinaires au sein d'écosystèmes
-              complexes. Mon intervention vise un juste équilibre : délivrer des résultats mesurables
-              via des frameworks agiles et de gouvernance (RGPD), tout en vulgarisant la complexité
-              pour faire de chaque projet un levier d'acculturation et de progrès partagé.
+              Œuvrer pour une Data &amp; IA centrée sur l'humain est l'un de mes objectifs. Ayant grandi dans un
+              environnement multiculturel, je m'appuie sur cette ouverture d'esprit pour faciliter le dialogue entre le
+              secteur public et privé, convaincue que l'intelligence collective est essentielle à la réussite.
+              Bilingue français-anglais avec une expérience internationale en Europe et en Océanie, mon parcours
+              m'a forgée une capacité prouvée à coordonner des équipes pluridisciplinaires au sein d'écosystèmes
+              complexes. Mon intervention vise un juste équilibre : délivrer des résultats mesurables via des
+              frameworks agiles et de gouvernance (RGPD), tout en vulgarisant la complexité pour faire de chaque
+              projet un levier d'acculturation et de progrès partagé.
             </p>
           </section>
 
@@ -221,11 +220,11 @@ export default function ResumePage() {
                 <span className="resume-exp-title" data-key="exp1-role" contentEditable={editable} suppressContentEditableWarning>Chargée de Mission – Numérique &amp; Audiovisuel</span>
                 <span className="resume-exp-period" data-key="exp1-period" contentEditable={editable} suppressContentEditableWarning>Mars 2024 – Nov. 2024</span>
               </div>
-              <div className="resume-exp-company" data-key="exp1-company" contentEditable={editable} suppressContentEditableWarning>Gouvernement de la Polynésie Française</div>
+              <div className="resume-exp-company" data-key="exp1-company" contentEditable={editable} suppressContentEditableWarning>Gouvernement de la Polynésie Française (Tahiti)</div>
               <ul className="resume-exp-bullets">
-                <li data-key="exp1-b1" contentEditable={editable} suppressContentEditableWarning>Cartographie de 20+ acteurs clés via un Stakeholder Mapping, alignant les feuilles de route publique/privée</li>
-                <li data-key="exp1-b2" contentEditable={editable} suppressContentEditableWarning>Référent direction/DGEN, traduction de 3 axes politiques en feuille de route opérationnelle co-construite</li>
-                <li data-key="exp1-b3" contentEditable={editable} suppressContentEditableWarning>Analyse d'impact réglementaire sur 2 projets d'infrastructures publiques, identifiant 10 points de risque</li>
+                <li data-key="exp1-b1" contentEditable={editable} suppressContentEditableWarning>Cartographie de 20+ acteurs clés via un stakeholder mapping, alignant les feuilles de route publique/privée</li>
+                <li data-key="exp1-b2" contentEditable={editable} suppressContentEditableWarning>Référent direction/Direction Générale de l'Economie Numérique (DGEN), traduction et co-construction de 3 axes politiques en feuille de route opérationnelle</li>
+                <li data-key="exp1-b3" contentEditable={editable} suppressContentEditableWarning>Analyse d'impact réglementaire sur 2 projets d'infrastructures publiques, identifiant 10 points de risques</li>
               </ul>
             </div>
 
@@ -237,7 +236,7 @@ export default function ResumePage() {
               <div className="resume-exp-company" data-key="exp2-company" contentEditable={editable} suppressContentEditableWarning>Crédit Agricole S.A, DataLab (Paris)</div>
               <ul className="resume-exp-bullets">
                 <li data-key="exp2-b1" contentEditable={editable} suppressContentEditableWarning>Structuration d'une équipe transverse de 10 personnes via Matrice RACI, -15% latence décisionnelle</li>
-                <li data-key="exp2-b2" contentEditable={editable} suppressContentEditableWarning>Cadrage de 2 POCs IA Générative via MoSCoW, livrable testable en moins de 4 mois</li>
+                <li data-key="exp2-b2" contentEditable={editable} suppressContentEditableWarning>Cadrage de 2 Preuves de Concept (POCs) en IA Générative via MoSCoW, livrable testable en moins de 4 mois</li>
                 <li data-key="exp2-b3" contentEditable={editable} suppressContentEditableWarning>Pilotage ateliers « Veille IA Green », 90% satisfaction équipes techniques et métier</li>
               </ul>
             </div>
@@ -249,8 +248,8 @@ export default function ResumePage() {
               </div>
               <div className="resume-exp-company" data-key="exp3-company" contentEditable={editable} suppressContentEditableWarning>Les Belles Envies (Paris)</div>
               <ul className="resume-exp-bullets">
-                <li data-key="exp3-b1" contentEditable={editable} suppressContentEditableWarning>Conception visuels produits, prospection commerciale et création de DIP</li>
-                <li data-key="exp3-b2" contentEditable={editable} suppressContentEditableWarning>Traduction brochures commerciales FR → EN pour le développement international</li>
+                <li data-key="exp3-b1" contentEditable={editable} suppressContentEditableWarning>Conception visuels produits, prospection commerciale et création de document d'information précontractuel</li>
+                <li data-key="exp3-b2" contentEditable={editable} suppressContentEditableWarning>Traduction brochures commerciales français/anglais pour le développement international</li>
               </ul>
             </div>
 
@@ -283,10 +282,10 @@ export default function ResumePage() {
 
             <div className="resume-edu-entry">
               <div className="resume-edu-header">
-                <span className="resume-edu-degree" data-key="edu1b-degree" contentEditable={editable} suppressContentEditableWarning>MSc AI for Business Transformation</span>
+                <span className="resume-edu-degree" data-key="edu1b-degree" contentEditable={editable} suppressContentEditableWarning>MSc Artificial Intelligence for Business Transformation</span>
                 <span className="resume-edu-period" data-key="edu1b-period" contentEditable={editable} suppressContentEditableWarning>2020 – 2023</span>
               </div>
-              <div className="resume-edu-institution" data-key="edu1b-inst" contentEditable={editable} suppressContentEditableWarning>Skema Business School / ESIEA France</div>
+              <div className="resume-edu-institution" data-key="edu1b-inst" contentEditable={editable} suppressContentEditableWarning>Skema Business School / ESIEA, Paris, France</div>
             </div>
 
             <div className="resume-edu-entry">
@@ -294,16 +293,16 @@ export default function ResumePage() {
                 <span className="resume-edu-degree" data-key="edu1a-degree" contentEditable={editable} suppressContentEditableWarning>Master en Management International Programme Grande Ecole</span>
                 <span className="resume-edu-period" data-key="edu1a-period" contentEditable={editable} suppressContentEditableWarning>2020 – 2023</span>
               </div>
-              <div className="resume-edu-institution" data-key="edu1a-inst" contentEditable={editable} suppressContentEditableWarning>Skema Business School / ESIEA France</div>
+              <div className="resume-edu-institution" data-key="edu1a-inst" contentEditable={editable} suppressContentEditableWarning>Skema Business School / ESIEA, Paris, France</div>
               <div className="resume-edu-note" data-key="edu1a-note" contentEditable={editable} suppressContentEditableWarning>2021 année de césure professionnelle</div>
             </div>
 
             <div className="resume-edu-entry">
               <div className="resume-edu-header">
-                <span className="resume-edu-degree" data-key="edu2-degree" contentEditable={editable} suppressContentEditableWarning>Bachelor de Commerce – International &amp; Management</span>
+                <span className="resume-edu-degree" data-key="edu2-degree" contentEditable={editable} suppressContentEditableWarning>Bachelor de Commerce – Commerce International &amp; Management</span>
                 <span className="resume-edu-period" data-key="edu2-period" contentEditable={editable} suppressContentEditableWarning>2017 – 2019</span>
               </div>
-              <div className="resume-edu-institution" data-key="edu2-inst" contentEditable={editable} suppressContentEditableWarning>Université d'Auckland, Nouvelle-Zélande</div>
+              <div className="resume-edu-institution" data-key="edu2-inst" contentEditable={editable} suppressContentEditableWarning>Université d'Auckland, Auckland, Nouvelle-Zélande</div>
             </div>
 
             <div className="resume-edu-entry">
@@ -320,16 +319,16 @@ export default function ResumePage() {
             <h2 data-key="proj-title" contentEditable={editable} suppressContentEditableWarning>Projets Clés</h2>
             <ul className="resume-projects-list">
               <li>
-                <span data-key="proj1-name" contentEditable={editable} suppressContentEditableWarning>Stratégie Numérique &amp; Alignement de l'Écosystème</span>
-                <span className="resume-project-meta" data-key="proj1-meta" contentEditable={editable} suppressContentEditableWarning>Gouv. Polynésie Française, 2024</span>
+                <span data-key="proj1-name" contentEditable={editable} suppressContentEditableWarning>Stratégie du numérique et de l'audiovisuel polynésien</span>
+                <span className="resume-project-meta" data-key="proj1-meta" contentEditable={editable} suppressContentEditableWarning>Gouvernement de la Polynésie Française, 2024</span>
               </li>
               <li>
                 <span data-key="proj2-name" contentEditable={editable} suppressContentEditableWarning>Livraison de POCs en IA Générative (x2)</span>
-                <span className="resume-project-meta" data-key="proj2-meta" contentEditable={editable} suppressContentEditableWarning>Crédit Agricole S.A, 2023</span>
+                <span className="resume-project-meta" data-key="proj2-meta" contentEditable={editable} suppressContentEditableWarning>Crédit Agricole S.A, DataLab, 2023</span>
               </li>
               <li>
                 <span data-key="proj5-name" contentEditable={editable} suppressContentEditableWarning>Programme Veille IA Green</span>
-                <span className="resume-project-meta" data-key="proj5-meta" contentEditable={editable} suppressContentEditableWarning>Crédit Agricole S.A, 2023</span>
+                <span className="resume-project-meta" data-key="proj5-meta" contentEditable={editable} suppressContentEditableWarning>Crédit Agricole S.A, DataLab, 2023</span>
               </li>
             </ul>
           </section>
@@ -338,7 +337,7 @@ export default function ResumePage() {
           <section className="resume-section">
             <h2 data-key="cert-title" contentEditable={editable} suppressContentEditableWarning>Certifications</h2>
             <ul className="resume-cert-list">
-              <li data-key="cert-1" contentEditable={editable} suppressContentEditableWarning>Elements of AI – IA &amp; Éthique, University of Helsinki <span className="resume-cert-year">(2025)</span></li>
+              <li data-key="cert-1" contentEditable={editable} suppressContentEditableWarning>Elements of AI – IA &amp; Éthique, University of Helsinki <span className="resume-cert-year">(2026)</span></li>
               <li data-key="cert-2" contentEditable={editable} suppressContentEditableWarning>L'Atelier RGPD – Protection des Données, CNIL <span className="resume-cert-year">(2025)</span></li>
               <li data-key="cert-3" contentEditable={editable} suppressContentEditableWarning>Cambridge Advanced English (CAE) C1 <span className="resume-cert-year">(2025)</span></li>
               <li data-key="cert-4" contentEditable={editable} suppressContentEditableWarning>Agile PM Certification <span className="resume-cert-year">(2023)</span></li>

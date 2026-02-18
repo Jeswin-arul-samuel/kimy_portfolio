@@ -18,7 +18,7 @@
   "hero": {
     "greeting": "Bonjour, je suis",
     "name": "Kim Hilaire",
-    "headline": "Chef de Projet Transformation Digitale & Data",
+    "headline": "Chef de Projet Transformation Digitale Data & IA",
     "subheadline": "Gouvernance IA | Conformité RGPD | Agile (Scrum/Kanban)",
     "cta": "Découvrir mon parcours"
   },
@@ -26,13 +26,16 @@
     "items": [
       { "value": 2, "suffix": "", "label": "Années d'expérience" },
       { "value": 30, "suffix": "+", "label": "Parties prenantes" },
-      { "value": 90, "suffix": "%", "label": "Satisfaction équipe" },
       { "value": 4, "suffix": "", "label": "Pays" }
     ]
   },
   "about": {
     "title": "À Propos",
-    "text": "Œuvrer pour une Data & IA centrée sur l'humain. Née et grandie dans un environnement multiculturel, je m'appuie sur cette ouverture d'esprit pour faciliter le dialogue entre le secteur public et privé, convaincue que l'intelligence collective est essentielle à la réussite. Bilingue français-anglais avec une expérience internationale en Europe et en Océanie, mon parcours m'a forgée une capacité prouvée à coordonner des équipes pluridisciplinaires au sein d'écosystèmes complexes. Mon intervention vise un juste équilibre : délivrer des résultats mesurables via des frameworks agiles et de gouvernance (RGPD), tout en vulgarisant la complexité pour faire de chaque projet un levier d'acculturation et de progrès partagé.",
+    "text": [
+      "Œuvrer pour une Data & IA centrée sur l'humain est l'un de mes objectifs.",
+      "Ayant grandi dans un environnement multiculturel, je m'appuie sur cette ouverture d'esprit pour faciliter le dialogue entre le secteur public et privé, convaincue que l'intelligence collective est essentielle à la réussite.",
+      "Bilingue français-anglais avec une expérience internationale en Europe et en Océanie, mon parcours m'a forgée une capacité prouvée à coordonner des équipes pluridisciplinaires au sein d'écosystèmes complexes. Mon intervention vise un juste équilibre : délivrer des résultats mesurables via des frameworks agiles et de gouvernance (RGPD), tout en vulgarisant la complexité pour faire de chaque projet un levier d'acculturation et de progrès partagé."
+    ],
     "email": "kimhilaire@yahoo.fr",
     "phone": "(+33) 6 26 21 13 55",
     "linkedin": "kim hilaire",
@@ -46,10 +49,10 @@
         "company": "Gouvernement de la Polynésie Française",
         "period": "Mars 2024 – Novembre 2024",
         "duration": "8 mois",
-        "metrics": ["30+ parties prenantes", "3 axes politiques", "10 points de risque"],
+        "metrics": ["20+ parties prenantes", "3 axes politiques", "10 points de risques"],
         "bullets": [
-          "Cartographie de 20+ acteurs clés (DGEN, OPT, FAI) via un Stakeholder Mapping, alignant les feuilles de route publique/privée pour la structuration des filières Audiovisuel & Numérique",
-          "Référent entre la direction du gouvernement et la DGEN, assurant la traduction de 3 axes majeurs de politique publique en une feuille de route opérationnelle co-construite et exécutable par les services techniques",
+          "Cartographie de 20+ acteurs clés (DGEN, OPT, FAI) via un Stakeholder Mapping, alignant les feuilles de route publique/privée pour la structuration des filières audiovisuelle et numérique",
+          "Référent entre la direction du gouvernement et la DGEN (Direction Générale de l'Économie du Numérique), assurant la traduction de 3 axes majeurs de politique publique en une feuille de route opérationnelle co-construite et exécutable par les services techniques",
           "Analyse d'impact réglementaire sur 2 projets d'infrastructures publiques via une Matrice des Risques, identifiant 10 points de vigilance juridiques et techniques avant le lancement des appels d'offres",
           "Priorisation des zones d'intervention de la DGEN pour la réduction de la fracture numérique via une Matrice de Décision multicritères, ciblant 2 zones blanches prioritaires pour les 12 mois suivants",
           "Rédaction de notes stratégiques et proposition de recommandations pour l'adoption de projets technologiques numériques et audiovisuels",
@@ -110,24 +113,24 @@
     "title": "Formations",
     "degrees": [
       {
-        "degree": "MSc AI for Business Transformation",
-        "institution": "Skema Business School / ESIEA France",
+        "degree": "MSc Artificial Intelligence\nfor Business Transformation",
+        "institution": "Skema Business School / ESIEA, Paris, France",
         "period": "2020 – 2023"
       },
       {
-        "degree": "Master en Management International Programme Grande École",
-        "institution": "Skema Business School / ESIEA France",
+        "degree": "Master en Management International\nProgramme Grande École",
+        "institution": "Skema Business School / ESIEA, Paris, France",
         "period": "2020 – 2023",
         "note": "2021 année de césure professionnelle"
       },
       {
-        "degree": "Bachelor de Commerce – International & Management",
-        "institution": "Université d'Auckland, Nouvelle-Zélande",
+        "degree": "Bachelor de Commerce –\nCommerce International & Management",
+        "institution": "Université d'Auckland, Auckland,\nNouvelle-Zélande",
         "period": "2017 – 2019"
       },
       {
         "degree": "Baccalauréat Général Scientifique",
-        "institution": "Lycée Blaise Pascal, Nouméa, Nouvelle-Calédonie",
+        "institution": "Lycée Blaise Pascal, Nouméa,\nNouvelle-Calédonie",
         "period": "2013 – 2015"
       }
     ]
@@ -159,15 +162,15 @@
         "name": "Stratégie Numérique & Alignement de l'Écosystème",
         "company": "Gouvernement de la Polynésie Française",
         "year": "2024",
-        "metric": { "value": "30+", "label": "Parties prenantes" },
-        "description": "Participation à la construction d'une cartographie complète de 30+ acteurs publics et privés pour aligner les feuilles de route des filières numérique et audiovisuel de la Polynésie française. Contribution au rapprochement des objectifs de politique publique avec les plans d'exécution opérationnels."
+        "metric": { "value": "20+", "label": "Parties prenantes" },
+        "description": ["Participation à la construction d'une cartographie complète de 20+ acteurs publics et privés pour aligner les feuilles de route des filières numérique et audiovisuel de la Polynésie française.", "Contribution au rapprochement des objectifs de politique publique avec les plans d'exécution opérationnels."]
       },
       {
         "name": "Livraison de POCs en IA générative (x2)",
         "company": "Crédit Agricole S.A, DataLab",
         "year": "2023",
         "metric": { "value": "2", "label": "POCs livrés" },
-        "description": "Cadrage et livraison de 2 Preuves de Concept en IA Générative au sein d'un grand établissement bancaire français. Application de la priorisation MoSCoW pour isoler les fonctionnalités critiques et garantir des livrables testables dans un délai de 4 mois."
+        "description": ["Cadrage et livraison de 2 Preuves de Concept en IA Générative au sein d'un grand établissement bancaire français.", "Application de la priorisation MoSCoW pour isoler les fonctionnalités critiques et garantir des livrables testables dans un délai de 4 mois."]
       },
       {
         "name": "Réduction de la fracture numérique",
@@ -180,7 +183,7 @@
         "name": "Évaluation des risques réglementaires",
         "company": "Gouvernement de la Polynésie Française",
         "year": "2024",
-        "metric": { "value": "10", "label": "Points de risque" },
+        "metric": { "value": "10", "label": "Points de risques" },
         "description": "Analyse d'impact réglementaire sur 2 projets d'infrastructures publiques via une Matrice des Risques, identifiant 10 points de vigilance juridiques et techniques avant le lancement des appels d'offres."
       },
       {
@@ -188,7 +191,7 @@
         "company": "Crédit Agricole S.A, DataLab",
         "year": "2023",
         "metric": { "value": "90%", "label": "Satisfaction" },
-        "description": "Conception et animation d'ateliers internes sur les pratiques d'IA responsable et durable. Mise en place d'un système de feedback quantitatif ayant enregistré un taux de satisfaction de 90% auprès des participants techniques et métier."
+        "description": ["Conception et animation d'ateliers internes sur les pratiques d'IA responsable et durable.", "Mise en place d'un système de feedback quantitatif ayant enregistré un taux de satisfaction de 90% auprès des participants techniques et métier."]
       }
     ]
   },
@@ -197,8 +200,8 @@
     "items": [
       {
         "name": "Elements of AI – IA & Éthique",
-        "issuer": "University of Helsinki",
-        "year": "2025",
+        "issuer": "University of Helsinki, MinnaLearn",
+        "year": "2026",
         "description": "Compréhension des algorithmes, Machine Learning et réseaux de neurones. Focus sur l'Éthique de l'IA, biais algorithmiques et impacts sociétaux."
       },
       {
@@ -211,22 +214,22 @@
         "name": "Cambridge Advanced English (CAE) C1",
         "issuer": "Cambridge",
         "year": "2025",
-        "description": "Certification de compétence professionnelle en anglais"
+        "description": "Certification de compétence professionnelle en anglais."
       },
       {
         "name": "Agile PM Certification",
-        "issuer": "",
+        "issuer": "APMG International",
         "year": "2023",
-        "description": "Certification en méthodologie de gestion de projet Agile"
+        "description": "Certification en méthodologie de gestion de projet Agile."
       }
     ]
   },
   "languages": {
     "title": "Langues",
     "items": [
-      { "name": "Français", "level": "Maternelle", "percent": 100 },
-      { "name": "Anglais", "level": "C1 (CAE)", "percent": 85 },
-      { "name": "Vietnamien", "level": "Débutant", "percent": 20 }
+      { "name": "Français", "level": "Maternelle", "blocks": 6, "tooltip": "Langue maternelle – Maîtrise parfaite" },
+      { "name": "Anglais", "level": "Courant – C1 (CAE)", "blocks": 5.5, "tooltip": "Niveau courant – Utilisation professionnelle avancée" },
+      { "name": "Vietnamien", "level": "Débutant", "blocks": 2.5, "tooltip": "Débutant – Notions de base" }
     ]
   },
   "hobbies": {

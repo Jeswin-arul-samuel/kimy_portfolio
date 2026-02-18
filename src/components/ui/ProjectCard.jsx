@@ -12,7 +12,12 @@ export default function ProjectCard({ name, company, year, metric, description }
         <span className="font-ui text-xs text-taupe whitespace-nowrap bg-cream px-2 py-1 rounded">{year}</span>
       </div>
       <p className="font-ui text-sm text-gold font-medium mb-3">{company}</p>
-      <p className="text-sm text-navy-light leading-relaxed">{description}</p>
+      {Array.isArray(description)
+        ? description.map((p, i) => (
+            <p key={i} className="text-sm text-navy-light leading-relaxed mb-2 last:mb-0">{p}</p>
+          ))
+        : <p className="text-sm text-navy-light leading-relaxed">{description}</p>
+      }
     </div>
   )
 }

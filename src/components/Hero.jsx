@@ -49,7 +49,7 @@ export default function Hero() {
         </button>
 
         {metrics && (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-14 pt-10 border-t border-cream-dark">
+          <div className="flex justify-center gap-12 md:gap-16 mt-14 pt-10 border-t border-cream-dark">
             {metrics.map((item) => (
               <CounterItem key={item.label} value={item.value} suffix={item.suffix} label={item.label} />
             ))}
