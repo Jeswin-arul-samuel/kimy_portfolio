@@ -3,17 +3,29 @@ import { Link } from 'react-router-dom'
 import html2canvas from 'html2canvas'
 import { jsPDF } from 'jspdf'
 import { QRCodeSVG } from 'qrcode.react'
+import ATSResume from './ATSResume'
 import './Resume.css'
 
 const STORAGE_KEY = 'resume_edits_v2'
+const ATS_FR_STORAGE_KEY = 'resume_edits_ats_fr_v1'
+const ATS_EN_STORAGE_KEY = 'resume_edits_ats_en_v1'
+
+const storageKeys = {
+  french: STORAGE_KEY,
+  'ats-fr': ATS_FR_STORAGE_KEY,
+  'ats-en': ATS_EN_STORAGE_KEY,
+}
 
 export default function ResumePage() {
   const resumeRef = useRef(null)
   const [isEditing, setIsEditing] = useState(false)
+  const [resumeStyle, setResumeStyle] = useState('french') // 'french', 'ats-fr', or 'ats-en'
 
-  // Restore saved edits from localStorage on mount
+  const currentStorageKey = storageKeys[resumeStyle]
+
+  // Restore saved edits from localStorage on mount or style change
   useEffect(() => {
-    const saved = localStorage.getItem(STORAGE_KEY)
+    const saved = localStorage.getItem(currentStorageKey)
     if (!saved || !resumeRef.current) return
     try {
       const edits = JSON.parse(saved)
@@ -22,7 +34,7 @@ export default function ResumePage() {
         if (el) el.innerHTML = html
       })
     } catch { /* ignore corrupt data */ }
-  }, [])
+  }, [resumeStyle, currentStorageKey])
 
   // Save all editable content to localStorage
   const saveEdits = useCallback(() => {
@@ -31,8 +43,8 @@ export default function ResumePage() {
     resumeRef.current.querySelectorAll('[data-key]').forEach(el => {
       edits[el.dataset.key] = el.innerHTML
     })
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(edits))
-  }, [])
+    localStorage.setItem(currentStorageKey, JSON.stringify(edits))
+  }, [currentStorageKey])
 
   // Toggle editing — save when finishing
   const handleToggleEdit = () => {
@@ -42,8 +54,17 @@ export default function ResumePage() {
 
   // Reset to defaults
   const handleReset = () => {
-    localStorage.removeItem(STORAGE_KEY)
+    localStorage.removeItem(currentStorageKey)
     window.location.reload()
+  }
+
+  // Switch resume style — save edits first if editing
+  const handleStyleSwitch = (style) => {
+    if (isEditing) {
+      saveEdits()
+      setIsEditing(false)
+    }
+    setResumeStyle(style)
   }
 
   const handleDownload = async () => {
@@ -66,7 +87,9 @@ export default function ResumePage() {
     const pdf = new jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait' })
     const imgData = canvas.toDataURL('image/jpeg', 0.98)
     pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297)
-    pdf.save('CV_Kim_Hilaire.pdf')
+    const filenames = { french: 'CV_Kim_Hilaire.pdf', 'ats-fr': 'CV_Kim_Hilaire_ATS_FR.pdf', 'ats-en': 'CV_Kim_Hilaire_ATS_EN.pdf' }
+    const filename = filenames[resumeStyle]
+    pdf.save(filename)
 
     // Restore screen styles and edit state
     el.style.margin = ''
@@ -89,6 +112,29 @@ export default function ResumePage() {
     <>
       <div className="resume-toolbar">
         <Link to="/" className="resume-back-link">&larr; Retour au site</Link>
+
+        {/* Resume Style Toggle */}
+        <div className="resume-style-toggle">
+          <button
+            className={`resume-style-btn${resumeStyle === 'french' ? ' active' : ''}`}
+            onClick={() => handleStyleSwitch('french')}
+          >
+            CV Français
+          </button>
+          <button
+            className={`resume-style-btn${resumeStyle === 'ats-fr' ? ' active' : ''}`}
+            onClick={() => handleStyleSwitch('ats-fr')}
+          >
+            ATS FR
+          </button>
+          <button
+            className={`resume-style-btn${resumeStyle === 'ats-en' ? ' active' : ''}`}
+            onClick={() => handleStyleSwitch('ats-en')}
+          >
+            ATS EN
+          </button>
+        </div>
+
         {isLocal && (
           <div className="resume-toolbar-actions">
             <button
@@ -107,249 +153,255 @@ export default function ResumePage() {
         )}
       </div>
 
-      <div className={`resume-page${isEditing ? ' is-editing' : ''}`} ref={resumeRef}>
-        {/* ===== LEFT SIDEBAR ===== */}
-        <aside className="resume-sidebar">
-          <img src="/dp.jpeg" alt="Kim Hilaire" className="resume-photo" />
+      {resumeStyle === 'french' ? (
+        <div className={`resume-page${isEditing ? ' is-editing' : ''}`} ref={resumeRef}>
+          {/* ===== LEFT SIDEBAR ===== */}
+          <aside className="resume-sidebar">
+            <img src="/dp.jpeg" alt="Kim Hilaire" className="resume-photo" />
 
-          <div className="resume-sidebar-name">
-            <h1 data-key="sidebar-name" contentEditable={editable} suppressContentEditableWarning>Kim Hilaire</h1>
-            <p data-key="sidebar-title" contentEditable={editable} suppressContentEditableWarning>Chef de Projet<br />Transformation Digitale<br />Data &amp; IA</p>
-          </div>
-
-          {/* Contact */}
-          <div className="resume-sidebar-section">
-            <h2 data-key="contact-title" contentEditable={editable} suppressContentEditableWarning>Contact</h2>
-            <ul className="resume-contact-list">
-              <li>
-                <span className="resume-contact-icon">&#9742;</span>
-                <a href="tel:+33626211355" className="resume-contact-link" data-key="contact-phone" contentEditable={editable} suppressContentEditableWarning>(+33) 6 26 21 13 55</a>
-              </li>
-              <li>
-                <span className="resume-contact-icon">&#9993;</span>
-                <a href="mailto:kimhilaire@yahoo.fr" className="resume-contact-link" data-key="contact-email" contentEditable={editable} suppressContentEditableWarning>kimhilaire@yahoo.fr</a>
-              </li>
-              <li>
-                <span className="resume-contact-icon">in</span>
-                <a href="https://www.linkedin.com/in/kim-h-618bb9202/" target="_blank" rel="noopener noreferrer" className="resume-contact-link" data-key="contact-linkedin" contentEditable={editable} suppressContentEditableWarning>kim hilaire</a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Compétences */}
-          <div className="resume-sidebar-section">
-            <h2 data-key="skills-title" contentEditable={editable} suppressContentEditableWarning>Compétences</h2>
-            <ul className="resume-skills-list">
-              <li data-key="skill-1" contentEditable={editable} suppressContentEditableWarning>Agile (Scrum, Kanban)</li>
-              <li data-key="skill-2" contentEditable={editable} suppressContentEditableWarning>Cadrage &amp; pilotage de projet</li>
-              <li data-key="skill-3" contentEditable={editable} suppressContentEditableWarning>Gestion des parties prenantes</li>
-              <li data-key="skill-4" contentEditable={editable} suppressContentEditableWarning>Matrice RACI / MoSCoW</li>
-              <li data-key="skill-5" contentEditable={editable} suppressContentEditableWarning>RGPD &amp; Privacy by Design</li>
-              <li data-key="skill-6" contentEditable={editable} suppressContentEditableWarning>IA générative &amp; éthique IA</li>
-              <li data-key="skill-7" contentEditable={editable} suppressContentEditableWarning>Gouvernance des données</li>
-              <li data-key="skill-8" contentEditable={editable} suppressContentEditableWarning>Jira / Confluence / Trello</li>
-              <li data-key="skill-9" contentEditable={editable} suppressContentEditableWarning>Python &amp; SQL</li>
-            </ul>
-          </div>
-
-          {/* Langues */}
-          <div className="resume-sidebar-section">
-            <h2 data-key="lang-title" contentEditable={editable} suppressContentEditableWarning>Langues</h2>
-
-            <div className="resume-lang-item">
-              <span data-key="lang-1-name" contentEditable={editable} suppressContentEditableWarning>Français</span>
-              <span className="resume-lang-level" data-key="lang-1-level" contentEditable={editable} suppressContentEditableWarning>Maternelle</span>
+            <div className="resume-sidebar-name">
+              <h1 data-key="sidebar-name" contentEditable={editable} suppressContentEditableWarning>Kim Hilaire</h1>
+              <p data-key="sidebar-title" contentEditable={editable} suppressContentEditableWarning>Chef de Projet<br />Transformation Digitale<br />Data &amp; IA</p>
             </div>
 
-            <div className="resume-lang-item">
-              <span data-key="lang-2-name" contentEditable={editable} suppressContentEditableWarning>Anglais</span>
-              <span className="resume-lang-level" data-key="lang-2-level" contentEditable={editable} suppressContentEditableWarning>Courant – C1 (CAE)</span>
-            </div>
-
-            <div className="resume-lang-item">
-              <span data-key="lang-3-name" contentEditable={editable} suppressContentEditableWarning>Vietnamien</span>
-              <span className="resume-lang-level" data-key="lang-3-level" contentEditable={editable} suppressContentEditableWarning>Débutant</span>
-            </div>
-          </div>
-
-          {/* Loisirs */}
-          <div className="resume-sidebar-section">
-            <h2 data-key="hobbies-title" contentEditable={editable} suppressContentEditableWarning>Loisirs</h2>
-            <ul className="resume-hobbies-list">
-              <li data-key="hobby-1" contentEditable={editable} suppressContentEditableWarning>Yoga &amp; Pilates</li>
-              <li data-key="hobby-2" contentEditable={editable} suppressContentEditableWarning>Gastronomie</li>
-              <li data-key="hobby-3" contentEditable={editable} suppressContentEditableWarning>Danse contemporaine</li>
-              <li data-key="hobby-4" contentEditable={editable} suppressContentEditableWarning>Jeunes IHEDN</li>
-            </ul>
-          </div>
-
-          {/* QR Code */}
-          <div className="resume-sidebar-section resume-qr-section">
-            <h2 data-key="qr-title" contentEditable={editable} suppressContentEditableWarning>Portfolio</h2>
-            <div className="resume-qr-wrapper">
-              <QRCodeSVG
-                value="https://portfolio-kimh.vercel.app"
-                size={150}
-                bgColor="transparent"
-                fgColor="#ffffff"
-                level="M"
-              />
-              <span className="resume-qr-label" data-key="qr-label" contentEditable={editable} suppressContentEditableWarning>portfolio-kimh.vercel.app</span>
-            </div>
-          </div>
-        </aside>
-
-        {/* ===== RIGHT MAIN ===== */}
-        <main className="resume-main">
-          {/* Profil */}
-          <section className="resume-section resume-profil">
-            <h2 data-key="profil-title" contentEditable={editable} suppressContentEditableWarning>Profil</h2>
-            <p data-key="profil-text" contentEditable={editable} suppressContentEditableWarning>
-              Œuvrer pour une Data &amp; IA centrée sur l'humain est l'un de mes objectifs. Ayant grandi dans un
-              environnement multiculturel, je m'appuie sur cette ouverture d'esprit pour faciliter le dialogue entre le
-              secteur public et privé, convaincue que l'intelligence collective est essentielle à la réussite.
-              Bilingue français-anglais avec une expérience internationale en Europe et en Océanie, mon parcours
-              m'a forgée une capacité prouvée à coordonner des équipes pluridisciplinaires au sein d'écosystèmes
-              complexes. Mon intervention vise un juste équilibre : délivrer des résultats mesurables via des
-              frameworks agiles et de gouvernance (RGPD), tout en vulgarisant la complexité pour faire de chaque
-              projet un levier d'acculturation et de progrès partagé.
-            </p>
-          </section>
-
-          {/* Expériences Professionnelles */}
-          <section className="resume-section">
-            <h2 data-key="exp-title" contentEditable={editable} suppressContentEditableWarning>Expériences Professionnelles</h2>
-
-            <div className="resume-exp-entry">
-              <div className="resume-exp-header">
-                <span className="resume-exp-title" data-key="exp1-role" contentEditable={editable} suppressContentEditableWarning>Chargée de Mission – Numérique &amp; Audiovisuel</span>
-                <span className="resume-exp-period" data-key="exp1-period" contentEditable={editable} suppressContentEditableWarning>Mars 2024 – Nov. 2024</span>
-              </div>
-              <div className="resume-exp-company" data-key="exp1-company" contentEditable={editable} suppressContentEditableWarning>Gouvernement de la Polynésie Française (Tahiti)</div>
-              <ul className="resume-exp-bullets">
-                <li data-key="exp1-b1" contentEditable={editable} suppressContentEditableWarning>Cartographie de 20+ acteurs clés via un stakeholder mapping, alignant les feuilles de route publique/privée</li>
-                <li data-key="exp1-b2" contentEditable={editable} suppressContentEditableWarning>Référent direction/Direction Générale de l'Economie Numérique (DGEN), traduction et co-construction de 3 axes politiques en feuille de route opérationnelle</li>
-                <li data-key="exp1-b3" contentEditable={editable} suppressContentEditableWarning>Analyse d'impact réglementaire sur 2 projets d'infrastructures publiques, identifiant 10 points de risques</li>
+            {/* Contact */}
+            <div className="resume-sidebar-section">
+              <h2 data-key="contact-title" contentEditable={editable} suppressContentEditableWarning>Contact</h2>
+              <ul className="resume-contact-list">
+                <li>
+                  <span className="resume-contact-icon">&#9742;</span>
+                  <a href="tel:+33626211355" className="resume-contact-link" data-key="contact-phone" contentEditable={editable} suppressContentEditableWarning>(+33) 6 26 21 13 55</a>
+                </li>
+                <li>
+                  <span className="resume-contact-icon">&#9993;</span>
+                  <a href="mailto:kimhilaire@yahoo.fr" className="resume-contact-link" data-key="contact-email" contentEditable={editable} suppressContentEditableWarning>kimhilaire@yahoo.fr</a>
+                </li>
+                <li>
+                  <span className="resume-contact-icon">in</span>
+                  <a href="https://www.linkedin.com/in/kim-h-618bb9202/" target="_blank" rel="noopener noreferrer" className="resume-contact-link" data-key="contact-linkedin" contentEditable={editable} suppressContentEditableWarning>kim hilaire</a>
+                </li>
               </ul>
             </div>
 
-            <div className="resume-exp-entry">
-              <div className="resume-exp-header">
-                <span className="resume-exp-title" data-key="exp2-role" contentEditable={editable} suppressContentEditableWarning>Assistante Chef de Projet – Data &amp; IA</span>
-                <span className="resume-exp-period" data-key="exp2-period" contentEditable={editable} suppressContentEditableWarning>Juin 2023 – Nov. 2023</span>
-              </div>
-              <div className="resume-exp-company" data-key="exp2-company" contentEditable={editable} suppressContentEditableWarning>Crédit Agricole S.A, DataLab (Paris)</div>
-              <ul className="resume-exp-bullets">
-                <li data-key="exp2-b1" contentEditable={editable} suppressContentEditableWarning>Structuration d'une équipe transverse de 10 personnes via une matrice RACI, -15% latence décisionnelle</li>
-                <li data-key="exp2-b2" contentEditable={editable} suppressContentEditableWarning>Cadrage de 2 Preuves de Concept (POCs) en IA Générative via MoSCoW, livrable testable en moins de 4 mois</li>
-                <li data-key="exp2-b3" contentEditable={editable} suppressContentEditableWarning>Pilotage ateliers « Veille IA Green », 90% satisfaction équipes techniques et métier</li>
+            {/* Compétences */}
+            <div className="resume-sidebar-section">
+              <h2 data-key="skills-title" contentEditable={editable} suppressContentEditableWarning>Compétences</h2>
+              <ul className="resume-skills-list">
+                <li data-key="skill-1" contentEditable={editable} suppressContentEditableWarning>Agile (Scrum, Kanban)</li>
+                <li data-key="skill-2" contentEditable={editable} suppressContentEditableWarning>Cadrage &amp; pilotage de projet</li>
+                <li data-key="skill-3" contentEditable={editable} suppressContentEditableWarning>Gestion des parties prenantes</li>
+                <li data-key="skill-4" contentEditable={editable} suppressContentEditableWarning>Matrice RACI / MoSCoW</li>
+                <li data-key="skill-5" contentEditable={editable} suppressContentEditableWarning>RGPD &amp; Privacy by Design</li>
+                <li data-key="skill-6" contentEditable={editable} suppressContentEditableWarning>IA générative &amp; éthique IA</li>
+                <li data-key="skill-7" contentEditable={editable} suppressContentEditableWarning>Gouvernance des données</li>
+                <li data-key="skill-8" contentEditable={editable} suppressContentEditableWarning>Jira / Confluence / Trello</li>
+                <li data-key="skill-9" contentEditable={editable} suppressContentEditableWarning>Python &amp; SQL</li>
               </ul>
             </div>
 
-            <div className="resume-exp-entry">
-              <div className="resume-exp-header">
-                <span className="resume-exp-title" data-key="exp3-role" contentEditable={editable} suppressContentEditableWarning>Assistante Marketing – Développement Commercial</span>
-                <span className="resume-exp-period" data-key="exp3-period" contentEditable={editable} suppressContentEditableWarning>Sept. 2021 – Déc. 2021</span>
+            {/* Langues */}
+            <div className="resume-sidebar-section">
+              <h2 data-key="lang-title" contentEditable={editable} suppressContentEditableWarning>Langues</h2>
+
+              <div className="resume-lang-item">
+                <span data-key="lang-1-name" contentEditable={editable} suppressContentEditableWarning>Français</span>
+                <span className="resume-lang-level" data-key="lang-1-level" contentEditable={editable} suppressContentEditableWarning>Maternelle</span>
               </div>
-              <div className="resume-exp-company" data-key="exp3-company" contentEditable={editable} suppressContentEditableWarning>Les Belles Envies (Paris)</div>
-              <ul className="resume-exp-bullets">
-                <li data-key="exp3-b1" contentEditable={editable} suppressContentEditableWarning>Conception visuels produits, prospection commerciale et création de document d'information précontractuel</li>
-                <li data-key="exp3-b2" contentEditable={editable} suppressContentEditableWarning>Traduction brochures commerciales français/anglais pour le développement international</li>
+
+              <div className="resume-lang-item">
+                <span data-key="lang-2-name" contentEditable={editable} suppressContentEditableWarning>Anglais</span>
+                <span className="resume-lang-level" data-key="lang-2-level" contentEditable={editable} suppressContentEditableWarning>Courant – C1 (CAE)</span>
+              </div>
+
+              <div className="resume-lang-item">
+                <span data-key="lang-3-name" contentEditable={editable} suppressContentEditableWarning>Vietnamien</span>
+                <span className="resume-lang-level" data-key="lang-3-level" contentEditable={editable} suppressContentEditableWarning>Débutant</span>
+              </div>
+            </div>
+
+            {/* Loisirs */}
+            <div className="resume-sidebar-section">
+              <h2 data-key="hobbies-title" contentEditable={editable} suppressContentEditableWarning>Loisirs</h2>
+              <ul className="resume-hobbies-list">
+                <li data-key="hobby-1" contentEditable={editable} suppressContentEditableWarning>Yoga &amp; Pilates</li>
+                <li data-key="hobby-2" contentEditable={editable} suppressContentEditableWarning>Gastronomie</li>
+                <li data-key="hobby-3" contentEditable={editable} suppressContentEditableWarning>Danse contemporaine</li>
+                <li data-key="hobby-4" contentEditable={editable} suppressContentEditableWarning>Jeunes IHEDN</li>
               </ul>
             </div>
 
-            <div className="resume-exp-entry">
-              <div className="resume-exp-header">
-                <span className="resume-exp-title" data-key="exp4-role" contentEditable={editable} suppressContentEditableWarning>Assistante Marketing</span>
-                <span className="resume-exp-period" data-key="exp4-period" contentEditable={editable} suppressContentEditableWarning>Fév. 2021 – Août 2021</span>
+            {/* QR Code */}
+            <div className="resume-sidebar-section resume-qr-section">
+              <h2 data-key="qr-title" contentEditable={editable} suppressContentEditableWarning>Portfolio</h2>
+              <div className="resume-qr-wrapper">
+                <QRCodeSVG
+                  value="https://portfolio-kimh.vercel.app"
+                  size={150}
+                  bgColor="transparent"
+                  fgColor="#ffffff"
+                  level="M"
+                />
+                <span className="resume-qr-label" data-key="qr-label" contentEditable={editable} suppressContentEditableWarning>portfolio-kimh.vercel.app</span>
               </div>
-              <div className="resume-exp-company" data-key="exp4-company" contentEditable={editable} suppressContentEditableWarning>American Express OFINA (Tahiti)</div>
-              <ul className="resume-exp-bullets">
-                <li data-key="exp4-b1" contentEditable={editable} suppressContentEditableWarning>Plans de communication produits bancaires régionaux, supports visuels et analyses concurrentielles</li>
+            </div>
+          </aside>
+
+          {/* ===== RIGHT MAIN ===== */}
+          <main className="resume-main">
+            {/* Profil */}
+            <section className="resume-section resume-profil">
+              <h2 data-key="profil-title" contentEditable={editable} suppressContentEditableWarning>Profil</h2>
+              <p data-key="profil-text" contentEditable={editable} suppressContentEditableWarning>
+                Œuvrer pour une Data &amp; IA centrée sur l'humain est l'un de mes objectifs. Ayant grandi dans un
+                environnement multiculturel, je m'appuie sur cette ouverture d'esprit pour faciliter le dialogue entre le
+                secteur public et privé, convaincue que l'intelligence collective est essentielle à la réussite.
+                Bilingue français-anglais avec une expérience internationale en Europe et en Océanie, mon parcours
+                m'a forgée une capacité prouvée à coordonner des équipes pluridisciplinaires au sein d'écosystèmes
+                complexes. Mon intervention vise un juste équilibre : délivrer des résultats mesurables via des
+                frameworks agiles et de gouvernance (RGPD), tout en vulgarisant la complexité pour faire de chaque
+                projet un levier d'acculturation et de progrès partagé.
+              </p>
+            </section>
+
+            {/* Expériences Professionnelles */}
+            <section className="resume-section">
+              <h2 data-key="exp-title" contentEditable={editable} suppressContentEditableWarning>Expériences Professionnelles</h2>
+
+              <div className="resume-exp-entry">
+                <div className="resume-exp-header">
+                  <span className="resume-exp-title" data-key="exp1-role" contentEditable={editable} suppressContentEditableWarning>Chargée de Mission – Numérique &amp; Audiovisuel</span>
+                  <span className="resume-exp-period" data-key="exp1-period" contentEditable={editable} suppressContentEditableWarning>Mars 2024 – Nov. 2024</span>
+                </div>
+                <div className="resume-exp-company" data-key="exp1-company" contentEditable={editable} suppressContentEditableWarning>Gouvernement de la Polynésie Française (Tahiti)</div>
+                <ul className="resume-exp-bullets">
+                  <li data-key="exp1-b1" contentEditable={editable} suppressContentEditableWarning>Cartographie de 20+ acteurs clés via un stakeholder mapping, alignant les feuilles de route publique/privée</li>
+                  <li data-key="exp1-b2" contentEditable={editable} suppressContentEditableWarning>Référent direction/Direction Générale de l'Economie Numérique (DGEN), traduction et co-construction de 3 axes politiques en feuille de route opérationnelle</li>
+                  <li data-key="exp1-b3" contentEditable={editable} suppressContentEditableWarning>Analyse d'impact réglementaire sur 2 projets d'infrastructures publiques, identifiant 10 points de risques</li>
+                </ul>
+              </div>
+
+              <div className="resume-exp-entry">
+                <div className="resume-exp-header">
+                  <span className="resume-exp-title" data-key="exp2-role" contentEditable={editable} suppressContentEditableWarning>Assistante Chef de Projet – Data &amp; IA</span>
+                  <span className="resume-exp-period" data-key="exp2-period" contentEditable={editable} suppressContentEditableWarning>Juin 2023 – Nov. 2023</span>
+                </div>
+                <div className="resume-exp-company" data-key="exp2-company" contentEditable={editable} suppressContentEditableWarning>Crédit Agricole S.A, DataLab (Paris)</div>
+                <ul className="resume-exp-bullets">
+                  <li data-key="exp2-b1" contentEditable={editable} suppressContentEditableWarning>Structuration d'une équipe transverse de 10 personnes via une matrice RACI, -15% latence décisionnelle</li>
+                  <li data-key="exp2-b2" contentEditable={editable} suppressContentEditableWarning>Cadrage de 2 Preuves de Concept (POCs) en IA Générative via MoSCoW, livrable testable en moins de 4 mois</li>
+                  <li data-key="exp2-b3" contentEditable={editable} suppressContentEditableWarning>Pilotage ateliers « Veille IA Green », 90% satisfaction équipes techniques et métier</li>
+                </ul>
+              </div>
+
+              <div className="resume-exp-entry">
+                <div className="resume-exp-header">
+                  <span className="resume-exp-title" data-key="exp3-role" contentEditable={editable} suppressContentEditableWarning>Assistante Marketing – Développement Commercial</span>
+                  <span className="resume-exp-period" data-key="exp3-period" contentEditable={editable} suppressContentEditableWarning>Sept. 2021 – Déc. 2021</span>
+                </div>
+                <div className="resume-exp-company" data-key="exp3-company" contentEditable={editable} suppressContentEditableWarning>Les Belles Envies (Paris)</div>
+                <ul className="resume-exp-bullets">
+                  <li data-key="exp3-b1" contentEditable={editable} suppressContentEditableWarning>Conception visuels produits, prospection commerciale et création de document d'information précontractuel</li>
+                  <li data-key="exp3-b2" contentEditable={editable} suppressContentEditableWarning>Traduction brochures commerciales français/anglais pour le développement international</li>
+                </ul>
+              </div>
+
+              <div className="resume-exp-entry">
+                <div className="resume-exp-header">
+                  <span className="resume-exp-title" data-key="exp4-role" contentEditable={editable} suppressContentEditableWarning>Assistante Marketing</span>
+                  <span className="resume-exp-period" data-key="exp4-period" contentEditable={editable} suppressContentEditableWarning>Fév. 2021 – Août 2021</span>
+                </div>
+                <div className="resume-exp-company" data-key="exp4-company" contentEditable={editable} suppressContentEditableWarning>American Express OFINA (Tahiti)</div>
+                <ul className="resume-exp-bullets">
+                  <li data-key="exp4-b1" contentEditable={editable} suppressContentEditableWarning>Plans de communication produits bancaires régionaux, supports visuels et analyses concurrentielles</li>
+                </ul>
+              </div>
+
+              <div className="resume-exp-entry">
+                <div className="resume-exp-header">
+                  <span className="resume-exp-title" data-key="exp5-role" contentEditable={editable} suppressContentEditableWarning>Assistante Marketing &amp; Communication</span>
+                  <span className="resume-exp-period" data-key="exp5-period" contentEditable={editable} suppressContentEditableWarning>Jan. 2018 – Mars 2018</span>
+                </div>
+                <div className="resume-exp-company" data-key="exp5-company" contentEditable={editable} suppressContentEditableWarning>Air Calédonie (Nouvelle-Calédonie)</div>
+                <ul className="resume-exp-bullets">
+                  <li data-key="exp5-b1" contentEditable={editable} suppressContentEditableWarning>Conception visuels de marque et gestion sponsoring événement teambuilding annuel</li>
+                </ul>
+              </div>
+            </section>
+
+            {/* Formations */}
+            <section className="resume-section">
+              <h2 data-key="edu-title" contentEditable={editable} suppressContentEditableWarning>Formations</h2>
+
+              <div className="resume-edu-entry">
+                <div className="resume-edu-header">
+                  <span className="resume-edu-degree" data-key="edu1b-degree" contentEditable={editable} suppressContentEditableWarning>MSc Artificial Intelligence for Business Transformation</span>
+                  <span className="resume-edu-period" data-key="edu1b-period" contentEditable={editable} suppressContentEditableWarning>2020 – 2023</span>
+                </div>
+                <div className="resume-edu-institution" data-key="edu1b-inst" contentEditable={editable} suppressContentEditableWarning>Skema Business School / ESIEA, Paris, France</div>
+              </div>
+
+              <div className="resume-edu-entry">
+                <div className="resume-edu-header">
+                  <span className="resume-edu-degree" data-key="edu1a-degree" contentEditable={editable} suppressContentEditableWarning>Master en Management International Programme Grande Ecole</span>
+                  <span className="resume-edu-period" data-key="edu1a-period" contentEditable={editable} suppressContentEditableWarning>2020 – 2023</span>
+                </div>
+                <div className="resume-edu-institution" data-key="edu1a-inst" contentEditable={editable} suppressContentEditableWarning>Skema Business School / ESIEA, Paris, France</div>
+                <div className="resume-edu-note" data-key="edu1a-note" contentEditable={editable} suppressContentEditableWarning>2021 année de césure professionnelle</div>
+              </div>
+
+              <div className="resume-edu-entry">
+                <div className="resume-edu-header">
+                  <span className="resume-edu-degree" data-key="edu2-degree" contentEditable={editable} suppressContentEditableWarning>Bachelor de Commerce – Commerce International &amp; Management</span>
+                  <span className="resume-edu-period" data-key="edu2-period" contentEditable={editable} suppressContentEditableWarning>2017 – 2019</span>
+                </div>
+                <div className="resume-edu-institution" data-key="edu2-inst" contentEditable={editable} suppressContentEditableWarning>Université d'Auckland, Auckland, Nouvelle-Zélande</div>
+              </div>
+
+              <div className="resume-edu-entry">
+                <div className="resume-edu-header">
+                  <span className="resume-edu-degree" data-key="edu3-degree" contentEditable={editable} suppressContentEditableWarning>Baccalauréat Général Scientifique</span>
+                  <span className="resume-edu-period" data-key="edu3-period" contentEditable={editable} suppressContentEditableWarning>2013 – 2015</span>
+                </div>
+                <div className="resume-edu-institution" data-key="edu3-inst" contentEditable={editable} suppressContentEditableWarning>Lycée Blaise Pascal, Nouméa, Nouvelle-Calédonie</div>
+              </div>
+            </section>
+
+            {/* Projets Clés */}
+            <section className="resume-section">
+              <h2 data-key="proj-title" contentEditable={editable} suppressContentEditableWarning>Projets Clés</h2>
+              <ul className="resume-projects-list">
+                <li>
+                  <span data-key="proj1-name" contentEditable={editable} suppressContentEditableWarning>Stratégie du numérique et de l'audiovisuel polynésien</span>
+                  <span className="resume-project-meta" data-key="proj1-meta" contentEditable={editable} suppressContentEditableWarning>Gouvernement de la Polynésie Française, 2024</span>
+                </li>
+                <li>
+                  <span data-key="proj2-name" contentEditable={editable} suppressContentEditableWarning>Livraison de POCs en IA Générative (x2)</span>
+                  <span className="resume-project-meta" data-key="proj2-meta" contentEditable={editable} suppressContentEditableWarning>Crédit Agricole S.A, DataLab, 2023</span>
+                </li>
+                <li>
+                  <span data-key="proj5-name" contentEditable={editable} suppressContentEditableWarning>Programme Veille IA Green</span>
+                  <span className="resume-project-meta" data-key="proj5-meta" contentEditable={editable} suppressContentEditableWarning>Crédit Agricole S.A, DataLab, 2023</span>
+                </li>
               </ul>
-            </div>
+            </section>
 
-            <div className="resume-exp-entry">
-              <div className="resume-exp-header">
-                <span className="resume-exp-title" data-key="exp5-role" contentEditable={editable} suppressContentEditableWarning>Assistante Marketing &amp; Communication</span>
-                <span className="resume-exp-period" data-key="exp5-period" contentEditable={editable} suppressContentEditableWarning>Jan. 2018 – Mars 2018</span>
-              </div>
-              <div className="resume-exp-company" data-key="exp5-company" contentEditable={editable} suppressContentEditableWarning>Air Calédonie (Nouvelle-Calédonie)</div>
-              <ul className="resume-exp-bullets">
-                <li data-key="exp5-b1" contentEditable={editable} suppressContentEditableWarning>Conception visuels de marque et gestion sponsoring événement teambuilding annuel</li>
+            {/* Certifications */}
+            <section className="resume-section">
+              <h2 data-key="cert-title" contentEditable={editable} suppressContentEditableWarning>Certifications</h2>
+              <ul className="resume-cert-list">
+                <li data-key="cert-1" contentEditable={editable} suppressContentEditableWarning>Elements of AI – IA &amp; Éthique, University of Helsinki <span className="resume-cert-year">(2026)</span></li>
+                <li data-key="cert-2" contentEditable={editable} suppressContentEditableWarning>L'Atelier RGPD – Protection des Données, CNIL <span className="resume-cert-year">(2025)</span></li>
+                <li data-key="cert-3" contentEditable={editable} suppressContentEditableWarning>Cambridge Advanced English (CAE) C1 <span className="resume-cert-year">(2025)</span></li>
+                <li data-key="cert-4" contentEditable={editable} suppressContentEditableWarning>Agile PM Certification <span className="resume-cert-year">(2023)</span></li>
               </ul>
-            </div>
-          </section>
-
-          {/* Formations */}
-          <section className="resume-section">
-            <h2 data-key="edu-title" contentEditable={editable} suppressContentEditableWarning>Formations</h2>
-
-            <div className="resume-edu-entry">
-              <div className="resume-edu-header">
-                <span className="resume-edu-degree" data-key="edu1b-degree" contentEditable={editable} suppressContentEditableWarning>MSc Artificial Intelligence for Business Transformation</span>
-                <span className="resume-edu-period" data-key="edu1b-period" contentEditable={editable} suppressContentEditableWarning>2020 – 2023</span>
-              </div>
-              <div className="resume-edu-institution" data-key="edu1b-inst" contentEditable={editable} suppressContentEditableWarning>Skema Business School / ESIEA, Paris, France</div>
-            </div>
-
-            <div className="resume-edu-entry">
-              <div className="resume-edu-header">
-                <span className="resume-edu-degree" data-key="edu1a-degree" contentEditable={editable} suppressContentEditableWarning>Master en Management International Programme Grande Ecole</span>
-                <span className="resume-edu-period" data-key="edu1a-period" contentEditable={editable} suppressContentEditableWarning>2020 – 2023</span>
-              </div>
-              <div className="resume-edu-institution" data-key="edu1a-inst" contentEditable={editable} suppressContentEditableWarning>Skema Business School / ESIEA, Paris, France</div>
-              <div className="resume-edu-note" data-key="edu1a-note" contentEditable={editable} suppressContentEditableWarning>2021 année de césure professionnelle</div>
-            </div>
-
-            <div className="resume-edu-entry">
-              <div className="resume-edu-header">
-                <span className="resume-edu-degree" data-key="edu2-degree" contentEditable={editable} suppressContentEditableWarning>Bachelor de Commerce – Commerce International &amp; Management</span>
-                <span className="resume-edu-period" data-key="edu2-period" contentEditable={editable} suppressContentEditableWarning>2017 – 2019</span>
-              </div>
-              <div className="resume-edu-institution" data-key="edu2-inst" contentEditable={editable} suppressContentEditableWarning>Université d'Auckland, Auckland, Nouvelle-Zélande</div>
-            </div>
-
-            <div className="resume-edu-entry">
-              <div className="resume-edu-header">
-                <span className="resume-edu-degree" data-key="edu3-degree" contentEditable={editable} suppressContentEditableWarning>Baccalauréat Général Scientifique</span>
-                <span className="resume-edu-period" data-key="edu3-period" contentEditable={editable} suppressContentEditableWarning>2013 – 2015</span>
-              </div>
-              <div className="resume-edu-institution" data-key="edu3-inst" contentEditable={editable} suppressContentEditableWarning>Lycée Blaise Pascal, Nouméa, Nouvelle-Calédonie</div>
-            </div>
-          </section>
-
-          {/* Projets Clés */}
-          <section className="resume-section">
-            <h2 data-key="proj-title" contentEditable={editable} suppressContentEditableWarning>Projets Clés</h2>
-            <ul className="resume-projects-list">
-              <li>
-                <span data-key="proj1-name" contentEditable={editable} suppressContentEditableWarning>Stratégie du numérique et de l'audiovisuel polynésien</span>
-                <span className="resume-project-meta" data-key="proj1-meta" contentEditable={editable} suppressContentEditableWarning>Gouvernement de la Polynésie Française, 2024</span>
-              </li>
-              <li>
-                <span data-key="proj2-name" contentEditable={editable} suppressContentEditableWarning>Livraison de POCs en IA Générative (x2)</span>
-                <span className="resume-project-meta" data-key="proj2-meta" contentEditable={editable} suppressContentEditableWarning>Crédit Agricole S.A, DataLab, 2023</span>
-              </li>
-              <li>
-                <span data-key="proj5-name" contentEditable={editable} suppressContentEditableWarning>Programme Veille IA Green</span>
-                <span className="resume-project-meta" data-key="proj5-meta" contentEditable={editable} suppressContentEditableWarning>Crédit Agricole S.A, DataLab, 2023</span>
-              </li>
-            </ul>
-          </section>
-
-          {/* Certifications */}
-          <section className="resume-section">
-            <h2 data-key="cert-title" contentEditable={editable} suppressContentEditableWarning>Certifications</h2>
-            <ul className="resume-cert-list">
-              <li data-key="cert-1" contentEditable={editable} suppressContentEditableWarning>Elements of AI – IA &amp; Éthique, University of Helsinki <span className="resume-cert-year">(2026)</span></li>
-              <li data-key="cert-2" contentEditable={editable} suppressContentEditableWarning>L'Atelier RGPD – Protection des Données, CNIL <span className="resume-cert-year">(2025)</span></li>
-              <li data-key="cert-3" contentEditable={editable} suppressContentEditableWarning>Cambridge Advanced English (CAE) C1 <span className="resume-cert-year">(2025)</span></li>
-              <li data-key="cert-4" contentEditable={editable} suppressContentEditableWarning>Agile PM Certification <span className="resume-cert-year">(2023)</span></li>
-            </ul>
-          </section>
-        </main>
-      </div>
+            </section>
+          </main>
+        </div>
+      ) : (
+        <div ref={resumeRef} className={isEditing ? 'is-editing' : ''}>
+          <ATSResume isEditing={isEditing} isLocal={isLocal} lang={resumeStyle === 'ats-en' ? 'en' : 'fr'} />
+        </div>
+      )}
     </>
   )
 }

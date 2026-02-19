@@ -416,6 +416,41 @@
   font-family: "Inter", sans-serif;
 }
 
+/* ---------- Resume Style Toggle ---------- */
+.resume-style-toggle {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.resume-style-btn {
+  background: transparent;
+  color: rgba(212, 184, 150, 0.6);
+  border: none;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.resume-style-btn:hover {
+  color: #D4B896;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.resume-style-btn.active {
+  background: #B8976A;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
 .resume-back-link {
   color: #D4B896;
   text-decoration: none;
@@ -516,7 +551,8 @@
 
 /* ---------- Screen preview ---------- */
 @media screen {
-  body:has(.resume-page) {
+  body:has(.resume-page),
+  body:has(.ats-resume) {
     background: #e8e4de;
   }
 

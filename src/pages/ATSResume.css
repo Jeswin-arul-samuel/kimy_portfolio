@@ -1,0 +1,250 @@
+/* ===== ATS-Friendly Resume – Clean, single-column, top-down ===== */
+
+.ats-resume {
+  --ats-text: #1a1a1a;
+  --ats-muted: #444444;
+  --ats-accent: #2C3E50;
+  --ats-border: #2C3E50;
+  --ats-bg: #ffffff;
+
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: var(--ats-text);
+  background: var(--ats-bg);
+  width: 210mm;
+  min-height: 297mm;
+  max-height: 297mm;
+  overflow: hidden;
+  padding: 20px 26px;
+  box-sizing: border-box;
+  line-height: 1.35;
+}
+
+.ats-resume *,
+.ats-resume *::before,
+.ats-resume *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Header ---------- */
+.ats-header {
+  text-align: center;
+  padding-bottom: 7px;
+  border-bottom: 2px solid var(--ats-border);
+  margin-bottom: 9px;
+}
+
+.ats-header h1 {
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ats-accent);
+  margin-bottom: 2px;
+}
+
+.ats-title {
+  font-size: 11.5px;
+  color: var(--ats-muted);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.ats-contact {
+  font-size: 10px;
+  color: var(--ats-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.ats-sep {
+  color: var(--ats-muted);
+  margin: 0 1px;
+}
+
+.ats-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ats-link:hover {
+  text-decoration: underline;
+  color: var(--ats-accent);
+}
+
+/* ---------- Sections ---------- */
+.ats-section {
+  margin-bottom: 7px;
+}
+
+.ats-section h2 {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--ats-accent);
+  border-bottom: 1.5px solid var(--ats-border);
+  padding-bottom: 2px;
+  margin-bottom: 5px;
+}
+
+/* ---------- Profile text ---------- */
+.ats-section > p:not(.ats-skills-line):not(.ats-note) {
+  font-size: 9.5px;
+  line-height: 1.4;
+  color: var(--ats-muted);
+  text-align: justify;
+}
+
+/* ---------- Entry (experience / education / project) ---------- */
+.ats-entry {
+  margin-bottom: 5px;
+}
+
+.ats-entry:last-child {
+  margin-bottom: 0;
+}
+
+.ats-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.ats-entry-left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.ats-entry-role {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--ats-text);
+  line-height: 1.25;
+}
+
+.ats-entry-org {
+  font-size: 9.5px;
+  color: var(--ats-muted);
+  font-style: italic;
+  line-height: 1.25;
+}
+
+.ats-entry-date {
+  font-size: 9.5px;
+  color: var(--ats-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-align: right;
+  padding-top: 1px;
+}
+
+.ats-note {
+  font-size: 9px;
+  color: var(--ats-muted);
+  font-style: italic;
+  margin-top: 1px;
+}
+
+/* ---------- Bullet lists ---------- */
+.ats-entry ul {
+  list-style: none;
+  margin-top: 2px;
+}
+
+.ats-entry ul li {
+  font-size: 9.5px;
+  line-height: 1.3;
+  padding-left: 10px;
+  position: relative;
+  margin-bottom: 1px;
+  color: var(--ats-muted);
+}
+
+.ats-entry ul li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--ats-accent);
+  font-size: 9.5px;
+}
+
+/* ---------- Skills / Languages / Hobbies inline ---------- */
+.ats-skills-line {
+  font-size: 10px;
+  line-height: 1.35;
+  color: var(--ats-text);
+}
+
+/* ---------- Certifications list ---------- */
+.ats-cert-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.ats-cert-list li {
+  font-size: 9.5px;
+  line-height: 1.3;
+  padding-left: 10px;
+  position: relative;
+  color: var(--ats-muted);
+}
+
+.ats-cert-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--ats-accent);
+  font-size: 9.5px;
+}
+
+/* ---------- Edit-mode visual cues ---------- */
+.is-editing .ats-resume [contenteditable="true"]:hover,
+.is-editing .ats-resume [contenteditable="true"]:focus {
+  background: rgba(44, 62, 80, 0.06);
+  outline: 1px dashed rgba(44, 62, 80, 0.3);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.is-editing .ats-resume [contenteditable="true"]:focus {
+  outline-style: solid;
+}
+
+/* ---------- Screen preview ---------- */
+@media screen {
+  .ats-resume {
+    margin: 60px auto 32px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* ---------- Print ---------- */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  .ats-resume {
+    margin: 0;
+    box-shadow: none;
+    width: 210mm;
+    min-height: 297mm;
+    max-height: 297mm;
+    overflow: hidden;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
