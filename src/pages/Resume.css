@@ -138,7 +138,7 @@
 }
 
 .resume-skills-list li::before {
-  content: "▸";
+  content: "•";
   position: absolute;
   left: 0;
   color: var(--accent);
@@ -175,12 +175,11 @@
 }
 
 .resume-hobbies-list li::before {
-  content: "◆";
+  content: "•";
   position: absolute;
   left: 0;
   color: var(--accent);
-  font-size: 7px;
-  top: 3px;
+  font-size: 10px;
 }
 
 /* ---------- Main content ---------- */
@@ -263,10 +262,11 @@
 }
 
 .resume-exp-bullets li::before {
-  content: "–";
+  content: "•";
   position: absolute;
   left: 0;
   color: var(--accent);
+  font-size: 10px;
 }
 
 /* Education entry */
@@ -330,12 +330,11 @@
 }
 
 .resume-cert-list li::before {
-  content: "✓";
+  content: "•";
   position: absolute;
   left: 0;
   color: var(--accent);
-  font-size: 9.5px;
-  font-weight: 700;
+  font-size: 10px;
 }
 
 .resume-cert-year {
@@ -359,11 +358,11 @@
 }
 
 .resume-projects-list li::before {
-  content: "▸";
+  content: "•";
   position: absolute;
   left: 0;
   color: var(--accent);
-  font-size: 9.5px;
+  font-size: 10px;
 }
 
 .resume-project-meta {
