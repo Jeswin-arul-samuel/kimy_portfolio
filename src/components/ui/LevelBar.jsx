@@ -3,13 +3,25 @@ import { useState } from 'react'
 const TOTAL = 6
 const LABELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 
+const FLAGS = {
+  'Français': '\u{1F1EB}\u{1F1F7}',
+  'French': '\u{1F1EB}\u{1F1F7}',
+  'Anglais': '\u{1F1EC}\u{1F1E7}',
+  'English': '\u{1F1EC}\u{1F1E7}',
+  'Vietnamien': '\u{1F1FB}\u{1F1F3}',
+  'Vietnamese': '\u{1F1FB}\u{1F1F3}',
+}
+
 export default function LevelBar({ name, level, blocks, tooltip }) {
   const [showTooltip, setShowTooltip] = useState(false)
+  const flag = FLAGS[name]
 
   return (
     <div className="flex flex-col items-center gap-3 w-64">
       {/* Language name */}
-      <h3 className="font-display text-xl font-semibold text-navy">{name}</h3>
+      <h3 className="font-display text-xl font-semibold text-navy">
+        {flag && <span className="mr-2">{flag}</span>}{name}
+      </h3>
 
       {/* Level label */}
       <span className="font-ui text-sm text-gold font-medium">{level}</span>
