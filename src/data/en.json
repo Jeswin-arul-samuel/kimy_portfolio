@@ -25,7 +25,7 @@
   "metrics": {
     "items": [
       { "value": 2, "suffix": "", "label": "Years Experience" },
-      { "value": 30, "suffix": "+", "label": "Stakeholders Mapped" },
+      { "value": 20, "suffix": "+", "label": "Stakeholders Mapped" },
       { "value": 4, "suffix": "", "label": "Countries" }
     ]
   },
