@@ -12,7 +12,6 @@ const NAV_ITEMS = [
   { key: 'languages', path: '/languages' },
   { key: 'hobbies', path: '/hobbies' },
   { key: 'contact', path: '/contact' },
-  { key: 'resume', path: '/resume' },
 ]
 
 export default function Navbar() {

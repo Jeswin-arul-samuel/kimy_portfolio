@@ -69,8 +69,8 @@ const content = {
   },
 }
 
-export default function ATSResume({ isEditing, isLocal, lang = 'fr' }) {
-  const editable = (isEditing && isLocal) || undefined
+export default function ATSResume({ isEditing, lang = 'fr' }) {
+  const editable = isEditing || undefined
   const d = content[lang]
   const prefix = lang === 'fr' ? 'ats' : 'ats-en'
 

@@ -102,11 +102,8 @@ export default function ResumePage() {
     }
   }
 
-  // Only show admin buttons on localhost (not on Vercel)
-  const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-
   // When not editing, attribute is absent (undefined removes it from DOM)
-  const editable = (isEditing && isLocal) || undefined
+  const editable = isEditing || undefined
 
   return (
     <>
@@ -135,22 +132,20 @@ export default function ResumePage() {
           </button>
         </div>
 
-        {isLocal && (
-          <div className="resume-toolbar-actions">
-            <button
-              className={`resume-edit-btn${isEditing ? ' active' : ''}`}
-              onClick={handleToggleEdit}
-            >
-              {isEditing ? 'Terminer' : 'Modifier'}
-            </button>
-            <button className="resume-reset-btn" onClick={handleReset}>
-              Réinitialiser
-            </button>
-            <button className="resume-download-btn" onClick={handleDownload}>
-              Télécharger PDF
-            </button>
-          </div>
-        )}
+        <div className="resume-toolbar-actions">
+          <button
+            className={`resume-edit-btn${isEditing ? ' active' : ''}`}
+            onClick={handleToggleEdit}
+          >
+            {isEditing ? 'Terminer' : 'Modifier'}
+          </button>
+          <button className="resume-reset-btn" onClick={handleReset}>
+            Réinitialiser
+          </button>
+          <button className="resume-download-btn" onClick={handleDownload}>
+            Télécharger PDF
+          </button>
+        </div>
       </div>
 
       {resumeStyle === 'french' ? (
@@ -399,7 +394,7 @@ export default function ResumePage() {
         </div>
       ) : (
         <div ref={resumeRef} className={isEditing ? 'is-editing' : ''}>
-          <ATSResume isEditing={isEditing} isLocal={isLocal} lang={resumeStyle === 'ats-en' ? 'en' : 'fr'} />
+          <ATSResume isEditing={isEditing} lang={resumeStyle === 'ats-en' ? 'en' : 'fr'} />
         </div>
       )}
     </>
