@@ -7,12 +7,16 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "enrich": "node scripts/enrich-data.js"
   },
   "dependencies": {
+    "@calcom/embed-react": "^1.5.3",
     "@vercel/analytics": "^1.6.1",
     "@vercel/speed-insights": "^1.3.1",
+    "dotenv": "^17.3.1",
     "html2pdf.js": "^0.14.0",
+    "openai": "^6.27.0",
     "qrcode.react": "^4.2.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

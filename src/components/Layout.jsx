@@ -17,7 +17,7 @@ export default function Layout() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="pt-16">
+      <main className="pt-16 pb-16">
         <PageTransition>
           <Outlet />
         </PageTransition>

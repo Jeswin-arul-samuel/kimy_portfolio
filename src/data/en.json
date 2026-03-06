@@ -241,6 +241,11 @@
       { "name": "Jeunes IHEDN", "icon": "defense" }
     ]
   },
+  "booking": {
+    "title": "Schedule a Meeting",
+    "description": "Book a slot for a video call via Google Meet.",
+    "button": "Book a Slot"
+  },
   "footer": {
     "contact": "Contact",
     "copyright": "Kim Hilaire. All rights reserved.",

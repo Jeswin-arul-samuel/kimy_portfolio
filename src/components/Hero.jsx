@@ -19,7 +19,7 @@ export default function Hero() {
   const metrics = t.metrics?.items
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 bg-cream">
+    <section className="min-h-screen flex items-center justify-center px-4 bg-cream -mt-16">
       <div className="text-center max-w-3xl">
         <img
           src="/dp.jpeg"

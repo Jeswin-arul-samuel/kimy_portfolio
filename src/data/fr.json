@@ -241,6 +241,11 @@
       { "name": "Jeunes IHEDN", "icon": "defense" }
     ]
   },
+  "booking": {
+    "title": "Planifier un rendez-vous",
+    "description": "Réservez un créneau pour un échange en visioconférence via Google Meet.",
+    "button": "Réserver un créneau"
+  },
   "footer": {
     "contact": "Contact",
     "copyright": "Kim Hilaire. Tous droits réservés.",

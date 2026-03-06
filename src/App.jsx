@@ -12,12 +12,15 @@ import LanguagesPage from './pages/LanguagesPage'
 import HobbiesPage from './pages/HobbiesPage'
 import ContactPage from './pages/ContactPage'
 import ResumePage from './pages/ResumePage'
+import Chatbot from './components/Chatbot'
+import './components/Chatbot.css'
 
 export default function App() {
   return (
     <>
       <Analytics />
       <SpeedInsights />
+      <Chatbot />
       <Routes>
         <Route path="/resume" element={<ResumePage />} />
         <Route element={<Layout />}>
