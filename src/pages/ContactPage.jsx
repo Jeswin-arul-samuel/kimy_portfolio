@@ -2,8 +2,7 @@ import Cal from '@calcom/embed-react'
 import { useLanguage } from '../hooks/useLanguage'
 import SectionHeading from '../components/ui/SectionHeading'
 
-// ── Change this to Kim's actual Cal.com username/event-slug ──
-const CAL_LINK = 'kim-hilaire/30min'
+const CAL_LINK = 'kimy-lr'
 
 export default function ContactPage() {
   const { t, lang } = useLanguage()
