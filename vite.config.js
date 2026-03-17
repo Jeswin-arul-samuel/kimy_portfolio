@@ -71,16 +71,25 @@ export default defineConfig(({ mode }) => {
               })
               const queryEmbedding = embResponse.data[0].embedding
 
-              // Retrieve top-4 relevant passages
+              // Retrieve top-4 relevant passages + always-include critical topics
+              const ALWAYS_INCLUDE = ['current-status']
               const scored = knowledgeBase
                 .map(p => ({
                   ...p,
                   score: cosineSim(queryEmbedding, p.embedding) * (p.lang === lang ? 1.0 : 0.85),
                 }))
                 .sort((a, b) => b.score - a.score)
-                .slice(0, 4)
 
-              const contextBlock = scored
+              const topResults = scored.slice(0, 4)
+              const topTopics = new Set(topResults.map(p => p.topic))
+              for (const topic of ALWAYS_INCLUDE) {
+                if (!topTopics.has(topic)) {
+                  const match = scored.find(p => p.topic === topic && p.lang === lang)
+                  if (match) topResults.push(match)
+                }
+              }
+
+              const contextBlock = topResults
                 .map((p, i) => `[${i + 1}] (${p.topic})\n${p.text}`)
                 .join('\n\n')
 

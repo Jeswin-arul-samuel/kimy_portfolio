@@ -16,6 +16,9 @@ function cosineSim(a, b) {
   return dot / (Math.sqrt(magA) * Math.sqrt(magB))
 }
 
+// Topics that should always be included as context to prevent hallucinations
+const ALWAYS_INCLUDE = ['current-status']
+
 async function retrieveContext(query, lang, topK = 4) {
   const response = await openai.embeddings.create({
     model: 'text-embedding-3-small',
@@ -29,7 +32,19 @@ async function retrieveContext(query, lang, topK = 4) {
   }))
 
   scored.sort((a, b) => b.score - a.score)
-  return scored.slice(0, topK)
+
+  // Always inject critical passages (in the right language) even if they didn't rank top-K
+  const topResults = scored.slice(0, topK)
+  const topTopics = new Set(topResults.map(p => p.topic))
+
+  for (const topic of ALWAYS_INCLUDE) {
+    if (!topTopics.has(topic)) {
+      const match = scored.find(p => p.topic === topic && p.lang === lang)
+      if (match) topResults.push(match)
+    }
+  }
+
+  return topResults
 }
 
 function detectLang(messages) {

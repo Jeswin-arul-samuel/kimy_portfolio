@@ -28,13 +28,39 @@ function buildRawSections(data, lang) {
     raw: `Name: Kim Hilaire\nTitle: ${data.hero.headline}\nSubheadline: ${data.hero.subheadline}\n\nAbout:\n${data.about.text.join(' ')}\n\nContact: ${data.about.email} | ${data.about.phone}\nLinkedIn: ${data.about.linkedinUrl}`,
   })
 
-  // Experience — one section per role
-  for (const role of data.experience.roles) {
+  // Experience — one section per role, with temporal context
+  const roles = data.experience.roles
+  for (let i = 0; i < roles.length; i++) {
+    const role = roles[i]
+    const isLatest = i === 0
+    const temporalLabel = isLatest
+      ? 'This was her MOST RECENT role. It has ENDED — she is NOT currently working here.'
+      : `This is a PAST role (${i + 1} of ${roles.length} in reverse chronological order). It has ENDED.`
+
     sections.push({
       topic: `experience-${role.company}`,
-      raw: `Position: ${role.position}\nCompany: ${role.company}\nPeriod: ${role.period} (${role.duration})\nMetrics: ${role.metrics.join(', ')}\nAchievements:\n${role.bullets.map(b => `- ${b}`).join('\n')}`,
+      raw: `${temporalLabel}\nPosition: ${role.position}\nCompany: ${role.company}\nPeriod: ${role.period} (${role.duration})\nMetrics: ${role.metrics.join(', ')}\nAchievements:\n${role.bullets.map(b => `- ${b}`).join('\n')}`,
     })
   }
+
+  // Current status — explicit passage about what Kim is doing now
+  const latestRole = roles[0]
+  const statusRaw = lang === 'fr'
+    ? `Kim Hilaire n'est PAS actuellement en poste. Son dernier poste était "${latestRole.position}" chez ${latestRole.company}, de ${latestRole.period}. Ce contrat est TERMINÉ. Elle est actuellement en recherche active de nouvelles opportunités professionnelles dans la gestion de projet, le digital, la data et l'IA.`
+    : `Kim Hilaire is NOT currently employed. Her most recent role was "${latestRole.position}" at ${latestRole.company}, from ${latestRole.period}. That contract has ENDED. She is currently actively seeking new professional opportunities in project management, digital, data, and AI.`
+  sections.push({
+    topic: 'current-status',
+    raw: statusRaw,
+  })
+
+  // Career timeline — chronological overview
+  const timelineLines = roles.map((r, i) =>
+    `${i + 1}. ${r.position} at ${r.company} (${r.period}) — ${r.duration}`
+  )
+  sections.push({
+    topic: 'career-timeline',
+    raw: `Kim's career in reverse chronological order (all roles have ended, none are current):\n${timelineLines.join('\n')}`,
+  })
 
   // Education — one section per degree
   for (const deg of data.education.degrees) {
